@@ -8,9 +8,7 @@ class Server {
     this.port = process.env.PORT;
 
     //Path Routes
-    this.paths = {
-      
-    };
+    this.paths = {};
 
     //Connect to db
     this.database();
@@ -29,9 +27,7 @@ class Server {
     this.app.use(express.static('public'));
   }
 
-  routes() {
-    
-  }
+  routes() {}
   async database() {
     await db();
   }
