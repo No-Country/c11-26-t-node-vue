@@ -9,7 +9,7 @@ class Server {
 
     //Path Routes
     this.paths = {
-      
+      auth: '/auth',
     };
 
     //Connect to db
@@ -30,7 +30,7 @@ class Server {
   }
 
   routes() {
-    
+    this.app.use(this.paths.auth, require('../routes/auth.routes.js'));
   }
   async database() {
     await db();
