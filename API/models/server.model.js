@@ -7,11 +7,9 @@ class Server {
     this.app = express();
     this.port = process.env.PORT;
 
-    //Path Routes
     this.paths = {
       auth: '/auth',
     };
-
     //Connect to db
     this.database();
 
