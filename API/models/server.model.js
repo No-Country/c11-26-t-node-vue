@@ -7,9 +7,9 @@ class Server {
     this.app = express();
     this.port = process.env.PORT;
 
-    //Path Routes
-    this.paths = {};
-
+    this.paths = {
+      auth: '/auth',
+    };
     //Connect to db
     this.database();
 
@@ -27,7 +27,9 @@ class Server {
     this.app.use(express.static('public'));
   }
 
-  routes() {}
+  routes() {
+    this.app.use(this.paths.auth, require('../routes/auth.routes.js'));
+  }
   async database() {
     await db();
   }
