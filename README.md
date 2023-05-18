@@ -1,1 +1,0 @@
-Para poder ver instrucciones del hosting de este proyecto, ingrese a las carpetas API/CLIENT dependiendo de cual quiera hostear!
