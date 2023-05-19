@@ -1,0 +1,65 @@
+.cardProducto {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;*/
+    
+  }
+
+  .cardProducto {
+    border-radius: 12px;
+    background-color: #615f5f;
+    height: 260PX;
+    width: 181px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 2px rgba(2, 252, 194, 0.724);
+    transition: all 0.25s;
+    
+  }
+
+  .cardProducto:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  h3  {
+    color: #fafafa;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    color: #fafafa;
+  }
+
+.imgCard {
+    width: 181px;
+    height: 184px;
+    border-radius: 12px 12px 0 0;
+    
+}
+
+.btnAgregar {
+  border: none;
+  border-radius: 25px;
+  background: aqua;
+  font-size: 15px;
+}
+
+.btnAgregar:hover {
+  transform: translateY(1px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
+
+.btnInfo {
+  text-decoration: none;
+  color: #020202;
+  border: solid white;
+  width: 90px;
+  text-align: center;
+  border-radius: 30px;
+  background: #fafafa;
+}
