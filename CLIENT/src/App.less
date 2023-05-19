@@ -126,21 +126,22 @@ section {
 
 .catalogo {
   background: linear-gradient(180deg, #000000 0%, #1E003E 30.22%);
-  height: 1024px;
   display: flex;
-
-
+  flex-flow: row wrap;
+  
+ 
+ 
+  
 
   .trayectoriaDeOnda{
     width: 30.67px;
     height: 32px;
-    display: flex;
-    flex-direction: row;
     padding-right: 21.33px;
+   
   }
 
   .h1Catalogo {
-    margin: 30px 0 0 160px;
+    margin: 30px 0 0 60px;
     color: #EAEBED;
     font-family: Montserrat, sans-serif;
     width: 182px;
@@ -151,56 +152,65 @@ section {
     font-weight: 800;
     font-size: 32px;
     line-height: 90%;
-  /* identical to box height, or 29px */
     text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
+    
+    
     
   }
   
-}
-
-.estilosContenedor {
-  padding-top: 130px;
-  display: flex;
-  flex-wrap: wrap;
-  //background: #EAEBED;
-  
-  
-
-  .estiloH4 {
+  .estilosContenedor {
+    padding-top: 130px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    margin: 0 100px 0 0px;
-    width: 31px;
-    height: 19px;
-    left: 893px;
-    top: 1195px;
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-/* identical to box height */
-
-
-    color: #EAEBED;
-
     
-  .gif{
-    width: 99px;
-    height: 99px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-
- 
+  
+    .estiloH4 {
+      
+      gap: 16px;
+      margin: 0 100px 0 90px;
+      width: 31px;
+      height: 19px;
+      left: 893px;
+      top: 1195px;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #EAEBED;
+      display: block;
+      
+      
+  
+      .estiloB {
+        background: #EAEBED;
+        height: 89px;
+        width: 89px;
+        border-radius: 50px;
+        display: flex;
+        
+  
+      }
+  
+      
+    .gif{
+      width: 60px;
+      height: 60px;
+      margin: 14px 14px 14px 14px;
+      border-radius: 50px;
+     
+    }
+  
+  
+    }
   }
 
+
+  .contenedorCard {
+   margin-top: 200px;
+   display: flex;
+    
 
   }
 }
+
 

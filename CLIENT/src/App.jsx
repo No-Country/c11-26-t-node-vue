@@ -1,7 +1,8 @@
 import "./App.less";
-import CardCatalogo from "./Components/CardCatalogo/CardCatalogo";
 import Footer from "./Components/Footer/Footer";
-import { BrowserRouter, Link, Route, Routes, NavLink } from "react-router-dom";
+import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom";
+import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner";
+import ItemDetailConteiner from "./Components/ItemDetailConteiner/ItemDetailConteines";
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
       </section>
       <br />
       <section className="catalogo">
-        <div>
+        
+        <>
           <h1 className="h1Catalogo">
             {" "}
             <img
@@ -55,72 +57,86 @@ function App() {
             />{" "}
             catálogo
           </h1>
-        </div>
+        </>
         <div className="estilosContenedor">
           <div className="estilosMusica">
             <h4 className="estiloH4">
+              <span className="estiloB">
               {" "}
               <img
                 className="gif"
                 src={"../../assets/auricular.gif"}
                 alt="Auricular"
               />{" "}
+              </span>
               DANCE
             </h4>
           </div>
           <div className="gif">
             <h4 className="estiloH4">
+            <span className="estiloB">
               {" "}
               <img
                 className="gif"
                 src={"../../assets/discos-compactos.gif"}
                 alt="Disco"
               />{" "}
+              </span>
               JAZZ
             </h4>
           </div>
           <div className="estilosMusica">
             <h4 className="estiloH4">
+            <span className="estiloB">
               {" "}
               <img
                 className="gif"
                 src={"../../assets/discos.gif"}
                 alt="Disco"
               />{" "}
+              </span>
               POP
             </h4>
           </div>
           <div className="estilosMusica">
             <h4 className="estiloH4">
+            <span className="estiloB">
               {" "}
               <img
                 className="gif"
                 src={"../../assets/placa-giratoria.gif"}
                 alt="R&B"
               />{" "}
+              </span>
               R&B
             </h4>
           </div>
           <div className="estilosMusica">
             <h4 className="estiloH4">
+            <span className="estiloB">
               {" "}
               <img
                 className="gif"
                 src={"../../assets/guitarra-electrica.gif"}
                 alt="Rock"
               />{" "}
+              </span>
               ROCK
             </h4>
           </div>
         </div>
-        <div>
-          <div>
-            {
+        <div className="contenedorCard">
+          
+            
               
-              //<CardCatalogo />
+          <Routes>
+          <Route path="/" element={<ItemListConteiner />} />
+          <Route path="/:idCategoria" element={<ItemListConteiner />} />
+          <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
+          </Routes>
               
-            }
-          </div>
+            
+          
         </div>
       </section>
       <br />
