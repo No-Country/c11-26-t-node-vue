@@ -11,7 +11,9 @@ const Item = ({id, titulo, precio, imagen, idCat}) => {
     <div className="cardProducto">
       
       <img src={imagen} alt={titulo} className='imgCard'/>
-      <h3>{titulo}</h3>
+      <h3 className='artista'>{id}</h3>
+      <h4 className='album'>{titulo}</h4>
+     
       {
       //<p>$ {precio}</p>
       //<p>{id}</p>

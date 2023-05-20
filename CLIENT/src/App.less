@@ -128,6 +128,8 @@ section {
   background: linear-gradient(180deg, #000000 0%, #1E003E 30.22%);
   display: flex;
   flex-flow: row wrap;
+  flex-direction: row;
+  align-items: center;
   
  
  
@@ -136,48 +138,67 @@ section {
   .trayectoriaDeOnda{
     width: 30.67px;
     height: 32px;
-    padding-right: 21.33px;
-   
+    margin-left: 90px;
   }
 
   .h1Catalogo {
-    margin: 30px 0 0 60px;
+    
     color: #EAEBED;
     font-family: Montserrat, sans-serif;
     width: 182px;
     height: 29px;
-    left: 212px;
-    top: 990px;
     font-style: normal;
     font-weight: 800;
     font-size: 32px;
     line-height: 90%;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+   
     
     
     
   }
   
   .estilosContenedor {
-    padding-top: 130px;
+    width: 100%;
+    margin-top: 130px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
     
-  
+    
+    
+    
+    .estilosMusica {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+
+
     .estiloH4 {
       
-      gap: 16px;
-      margin: 0 100px 0 90px;
+      gap: 40px;
+      margin: 30px 10px 0 0px;
       width: 31px;
       height: 19px;
-      left: 893px;
-      top: 1195px;
       font-family: 'Roboto', sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
       line-height: 19px;
       color: #EAEBED;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       
       
   
@@ -186,7 +207,7 @@ section {
         height: 89px;
         width: 89px;
         border-radius: 50px;
-        display: flex;
+        
         
   
       }
@@ -197,6 +218,8 @@ section {
       height: 60px;
       margin: 14px 14px 14px 14px;
       border-radius: 50px;
+     
+     
      
     }
   
@@ -213,4 +236,32 @@ section {
   }
 }
 
+.artistasContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-left: 90px;
+  margin-top: 50px;
 
+  .artistasImg {
+    width: 32px;
+    height: 31.91px;
+
+  }
+
+  .artistash2 {
+    color: #EAEBED;
+    width: 162px;
+    height: 29px;
+    left: 208px;
+    top: 1995px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 90%; 
+    text-transform: uppercase;
+  }
+
+}
