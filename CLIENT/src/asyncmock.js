@@ -30,56 +30,56 @@ const productos = [
       {
         id: "David Guetta",
         titulo: "Nothing but the beat | 2011",
-        imagen: "../../assets/tapasdedisco/davidguetta.jpg",
+        imagen: "../../assets/tapasdedisco/aliciakeys.jpg",
+        idCat: "dance",
+        precio: 500
+      },
+      {
+        id: "David Guetta",
+        titulo: "Nothing but the  | 2011",
+        imagen: "../../assets/tapasdedisco/Coldplay.png",
         idCat: "dance",
         precio: 500
       },
       {
         id: "David Guetta",
         titulo: "Nothing but the beat | 2011",
-        imagen: "../../assets/tapasdedisco/davidguetta.jpg",
+        imagen: "../../assets/tapasdedisco/brunomars.jpg",
         idCat: "dance",
         precio: 500
       },
       {
         id: "David Guetta",
         titulo: "Nothing but the beat | 2011",
-        imagen: "../../assets/tapasdedisco/davidguetta.jpg",
+        imagen: "../../assets/tapasdedisco/imagindragons.jpg",
         idCat: "dance",
         precio: 500
       },
       {
         id: "David Guetta",
         titulo: "Nothing but the beat | 2011",
-        imagen: "../../assets/tapasdedisco/davidguetta.jpg",
+        imagen: "../../assets/tapasdedisco/fito.jpg",
         idCat: "dance",
         precio: 500
       },
       {
         id: "David Guetta",
         titulo: "Nothing but the beat | 2011",
-        imagen: "../../assets/tapasdedisco/davidguetta.jpg",
+        imagen: "../../assets/tapasdedisco/billieeilish.jpg",
         idCat: "dance",
         precio: 500
       },
       {
         id: "David Guetta",
         titulo: "Nothing but the beat | 2011",
-        imagen: "../../assets/tapasdedisco/davidguetta.jpg",
+        imagen: "../../assets/tapasdedisco/eminen.jpg",
         idCat: "dance",
         precio: 500
       },
       {
         id: "David Guetta",
         titulo: "Nothing but the beat | 2011",
-        imagen: "../../assets/tapasdedisco/davidguetta.jpg",
-        idCat: "dance",
-        precio: 500
-      },
-      {
-        id: "David Guetta",
-        titulo: "Nothing but the beat | 2011",
-        imagen: "../../assets/tapasdedisco/davidguetta.jpg",
+        imagen: "../../assets/tapasdedisco/adele.jpg",
         idCat: "dance",
         precio: 500
       },
