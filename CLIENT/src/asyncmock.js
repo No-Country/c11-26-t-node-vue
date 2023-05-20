@@ -4,7 +4,8 @@ const productos = [
         titulo: "Nothing but the beat | 2011",
         imagen: "../../assets/tapasdedisco/davidguetta.jpg",
         idCat: "dance",
-        precio: 500
+        precio: 500,
+        background: "#FFD829"
       },
       {
         id: "Beyonce",
@@ -80,7 +81,7 @@ const productos = [
         id: "Adele",
         titulo: "Adele 21 | 2011",
         imagen: "../../assets/tapasdedisco/adele.jpg",
-        idCat: "dance",
+        idCat: "pop",
         precio: 500
       },
 
