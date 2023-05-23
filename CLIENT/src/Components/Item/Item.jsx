@@ -20,11 +20,12 @@ const Item = ({ id, titulo, precio, imagen, idCat, color }) => {
 
   return (
     <div className="cardProducto" style={{ backgroundColor }}>
-      <div >
+      <div className="contenedorCardArtista">
       <img src={imagen} alt={titulo} className="imgCard" />
-      <h3 className="artista">{id}</h3>
-      <h4 className="album">{titulo}</h4>
-
+      <div>
+      <span className="artista">{id}</span>
+      <span className="album">{titulo}</span>
+      </div>
       {
         //<p>$ {precio}</p>
         //<p>{id}</p>

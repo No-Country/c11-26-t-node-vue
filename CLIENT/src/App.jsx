@@ -13,18 +13,23 @@ function App() {
           <img src="/logo.png" alt="Logo" />
           <ul>
             <li>
-              <NavLink to={"/"}>Inicio</NavLink>
+              <Link to={"*"}>
+                <button className="btnRegisto">Registro</button>
+              </Link>
             </li>
             <li>
-              <a href="">Nosotros</a>
-            </li>
-            <li>
-              <a href="">Registrarse</a>
-            </li>
-            <li>
-              <button>Iniciar de sesión</button>
+              <Link to={"*"}>
+                <button className="btnInicio">Inicio de sesión</button>
+              </Link>
             </li>
           </ul>
+        </div>
+        <div className="contenedorNaranja">
+          <img
+            className="estrellaNaranja"
+            src={"../assets/Formassimples/EstrellaNaranja.svg"}
+            alt="Estrella Naranja"
+          />
         </div>
         <div className="frontpage">
           <div className="text">
@@ -34,14 +39,39 @@ function App() {
               <span className="l-blue">que mueve </span>
               <span className="white">tu alma</span>
             </h1>
-            <p>
+            <div className="contenedorElipseGrande">
+              <img
+                className="elipseGrande"
+                src={"../assets/Formassimples/ElipseGrande.svg"}
+                alt="Elipse Grande"
+              />
+            </div>
+            <p className="parrafoLandig">
               Encuentra tus artistas favoritos, géneros apasionantes y álbumes
               icónicos. ¡Empieza a disfrutar de la música que amas hoy mismo!
             </p>
-            <button>Explorar ahora</button>
+            <div className="btnConteExplorar">
+            <button className="btnExplorar">Explorar ahora</button>
+            </div>
           </div>
-          <div className="logo">
-            <img src="/logo.png" alt="" />
+          <div className="logoContenedor">
+            <div className="contenedorEPequena">
+              <img
+                className="elipsePequena"
+                src={"../assets/Formassimples/ElipsePequena.svg"}
+                alt="Elipse Pequeña"
+              />
+            </div>
+
+            <img className="logoPrincipal" src="/logo.png" alt="Logo" />
+
+            <div className="contenedorAmarilla">
+              <img
+                className="estrellaAmarilla"
+                src={"../assets/Formassimples/EstrellaAmarilla.svg"}
+                alt="Estrella Amarilla"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -52,11 +82,11 @@ function App() {
             src={"../../assets/imgtrayectoriadeformadeonda.svg"}
             alt="Trayectoria de Onda"
           />
-          <h1 className="h1Catalogo">catálogo</h1>
+          <h2 className="h2Catalogo">catálogo</h2>
         </>
         <div className="estilosContenedor">
           <div className="estilosMusica">
-            <Link to={"/dance"}>
+            <Link to={"/dance"} className="linkEstilos">
               <h4 className="estiloH4">
                 <span className="estiloB">
                   {" "}
@@ -71,63 +101,63 @@ function App() {
             </Link>
           </div>
           <div className="gif">
-            <Link to={"jazz"}>
-            <h4 className="estiloH4">
-              <span className="estiloB">
-                {" "}
-                <img
-                  className="gif"
-                  src={"../../assets/discos-compactos.gif"}
-                  alt="Disco"
-                />{" "}
-              </span>
-              JAZZ
-            </h4>
+            <Link to={"jazz"} className="linkEstilos">
+              <h4 className="estiloH4">
+                <span className="estiloB">
+                  {" "}
+                  <img
+                    className="gif"
+                    src={"../../assets/discos-compactos.gif"}
+                    alt="Disco"
+                  />{" "}
+                </span>
+                JAZZ
+              </h4>
             </Link>
           </div>
           <div className="estilosMusica">
-            <Link to={"pop"}>
-            <h4 className="estiloH4">
-              <span className="estiloB">
-                {" "}
-                <img
-                  className="gif"
-                  src={"../../assets/discos.gif"}
-                  alt="Disco"
-                />{" "}
-              </span>
-              POP
-            </h4>
+            <Link to={"pop"} className="linkEstilos">
+              <h4 className="estiloH4">
+                <span className="estiloB">
+                  {" "}
+                  <img
+                    className="gif"
+                    src={"../../assets/discos.gif"}
+                    alt="Disco"
+                  />{" "}
+                </span>
+                POP
+              </h4>
             </Link>
           </div>
           <div className="estilosMusica">
-            <Link to={"r&b"}>
-            <h4 className="estiloH4">
-              <span className="estiloB">
-                {" "}
-                <img
-                  className="gif"
-                  src={"../../assets/placa-giratoria.gif"}
-                  alt="R&B"
-                />{" "}
-              </span>
-              R&B
-            </h4>
+            <Link to={"r&b"} className="linkEstilos">
+              <h4 className="estiloH4">
+                <span className="estiloB">
+                  {" "}
+                  <img
+                    className="gif"
+                    src={"../../assets/placa-giratoria.gif"}
+                    alt="R&B"
+                  />{" "}
+                </span>
+                R&B
+              </h4>
             </Link>
           </div>
           <div className="estilosMusica">
-            <Link to={"rock"}>
-            <h4 className="estiloH4">
-              <span className="estiloB">
-                {" "}
-                <img
-                  className="gif"
-                  src={"../../assets/guitarra-electrica.gif"}
-                  alt="Rock"
-                />{" "}
-              </span>
-              ROCK
-            </h4>
+            <Link to={"rock"} className="linkEstilos">
+              <h4 className="estiloH4">
+                <span className="estiloB">
+                  {" "}
+                  <img
+                    className="gif"
+                    src={"../../assets/guitarra-electrica.gif"}
+                    alt="Rock"
+                  />{" "}
+                </span>
+                ROCK
+              </h4>
             </Link>
           </div>
         </div>

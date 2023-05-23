@@ -3,6 +3,7 @@
     overflow-x: hidden;
     margin-bottom: 60px;
     margin-top: 80px;
+    border: none;
 }
 
 
@@ -20,5 +21,14 @@
     height: 542px;
     width: 438px;
     pointer-events: none;
+    padding: 0;
+    margin: O;
 }
 
+@media screen and (max-width: 340px) {
+    .imgSlider {
+        height: 4870spx;
+        width: 390px;
+        pointer-events: none;
+    }
+}

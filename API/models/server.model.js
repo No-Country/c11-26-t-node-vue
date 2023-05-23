@@ -9,6 +9,7 @@ class Server {
 
     this.paths = {
       auth: '/auth',
+      music: '/music',
     };
     //Connect to db
     this.database();
@@ -29,6 +30,7 @@ class Server {
 
   routes() {
     this.app.use(this.paths.auth, require('../routes/auth.routes.js'));
+    this.app.use(this.paths.music, require('../routes/music.routes.js'));
   }
   async database() {
     await db();
