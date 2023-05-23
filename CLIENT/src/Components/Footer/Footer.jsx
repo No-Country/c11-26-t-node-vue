@@ -14,31 +14,31 @@ const Footer = () => {
         <div className="contenedorfoot">
           <h3 className="titleFooter">Musica</h3>
           <Link className="linkFooter" to={"/"}>
-            <p className="p">Inicio</p>
+            <p className="links">Inicio</p>
           </Link>
           <Link className="linkFooter" to={"/"}>
-            <p className="p">Catalogó</p>
+            <p className="links">Catalogó</p>
           </Link>
           <Link className="linkFooter" to={"/"}>
-            <p className="p">Artistas</p>
+            <p className="links">Artistas</p>
           </Link>
         </div>
         <div className="contenedorfoot">
           <h3 className="titleFooter">Enlaces útiles</h3>
           <Link className="linkFooter" to={"/"}>
-            <p className="p">Ayuda</p>
+            <p className="links">Ayuda</p>
           </Link>
           <Link className="linkFooter" to={"/"}>
-            <p className="p">Preguntas frecuentes</p>
+            <p className="links">Preguntas frecuentes</p>
           </Link>
           <Link className="linkFooter" to={"/"}>
-            <p className="p">App móvil gratis</p>
+            <p className="links">App móvil gratis</p>
           </Link>
         </div>
         <div className="contenedorfoot">
           <h3 className="titleFooter">Equipo</h3>
           <Link className="linkFooter" to={"/"}>
-            <p className="p">Acerca de</p>
+            <p className="links">Acerca de</p>
           </Link>
         </div>
         <div className="contenedorfoot">
@@ -50,8 +50,7 @@ const Footer = () => {
       </div>
       <hr />
       <p className="copy">
-        {" "}
-        Copyrigth <AiOutlineCopyrightCircle />
+        Copyright <AiOutlineCopyrightCircle />
         <span className="parrafoMagenta">c11-26-t-node-vue</span>
       </p>
     </footer>
