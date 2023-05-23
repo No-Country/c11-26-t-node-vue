@@ -1,13 +1,13 @@
 import "./App.less";
 import Footer from "./Components/Footer/Footer";
-import { BrowserRouter, Route, Routes, NavLink, Link } from "react-router-dom";
+import { Route, Routes, NavLink, Link } from "react-router-dom";
 import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner";
 import ItemDetailConteiner from "./Components/ItemDetailConteiner/ItemDetailConteines";
 import Carrusel from "./Components/Carrusel/Carrusel";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <section className="header">
         <div className="navbar">
           <img src="/logo.png" alt="Logo" />
@@ -179,7 +179,7 @@ function App() {
         <Carrusel />
       </section>
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 
