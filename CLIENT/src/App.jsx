@@ -4,19 +4,24 @@ import { BrowserRouter, Route, Routes, NavLink, Link } from "react-router-dom";
 import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner";
 import ItemDetailConteiner from "./Components/ItemDetailConteiner/ItemDetailConteines";
 import Carrusel from "./Components/Carrusel/Carrusel";
+import LoginForm from "./Components/LoginForm/LoginForm";
+
 
 function App() {
   return (
     <BrowserRouter>
       <section className="header">
         <div className="navbar">
+          <Link to={'/'}>
           <img src="/logo.png" alt="Logo" />
+          </Link>
           <ul>
             <li>
-              <Link to={"*"}>
+              <Link to={"/login"}>
                 <button className="btnRegisto">Registro</button>
               </Link>
             </li>
+            
             <li>
               <Link to={"*"}>
                 <button className="btnInicio">Inicio de sesión</button>
@@ -163,7 +168,9 @@ function App() {
         </div>
         <div className="contenedorCard">
           <Routes>
-            <Route path="/" element={<ItemListConteiner />} />
+          
+            <Route path="/login" element={ <LoginForm/> } />
+            <Route path="/" element={ <ItemListConteiner />} />
             <Route path="/:idCategoria" element={<ItemListConteiner />} />
             <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
           </Routes>
