@@ -1,4 +1,5 @@
 import "./Item.css";
+import "../../App.less";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 
@@ -20,11 +21,13 @@ const Item = ({ id, titulo, precio, imagen, idCat, color }) => {
 
   return (
     <div className="cardProducto" style={{ backgroundColor }}>
+      
       <div className="contenedorCardArtista">
       <img src={imagen} alt={titulo} className="imgCard" />
       <div>
       <span className="artista">{id}</span>
       <span className="album">{titulo}</span>
+      <Link to={`/item/${id}`} className='btnInfo'style={{ backgroundColor }}></Link>
       </div>
       {
         //<p>$ {precio}</p>
@@ -34,6 +37,7 @@ const Item = ({ id, titulo, precio, imagen, idCat, color }) => {
         //<button className='btnAgregar' onClick={ agregarProd }>AGREGAR</button>
       }
       </div>
+      
     </div>
   );
 };

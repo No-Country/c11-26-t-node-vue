@@ -1,5 +1,6 @@
 import Item from "../Item/Item";
 import './ItemList.css'
+import "../../App.less";
 
 const ItemList = ({productos}) => {
   return (

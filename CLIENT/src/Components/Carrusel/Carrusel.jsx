@@ -1,22 +1,33 @@
 import "./Carrusel.css";
+import "../../App.less";
 import Images from "../../../assets/export/images";
 import { motion } from "framer-motion";
 
 const Carrusel = () => {
   return (
-    <motion.div className="sliderContainer">
-      <motion.div
-        className="slider"
-        drag="x"
-        dragConstraints={{ right: 0, left: -2650 }}
-      >
-        {Images.map((image) => (
-          <motion.div className="item">
-            <img className="imgSlider" src={image} alt="" />
-          </motion.div>
-        ))}
+    <>
+      <div className="artistasContainer">
+        <img
+          className="artistasImg"
+          src={"../assets/microfono.svg"}
+          alt="Logo microfono"
+        />
+        <h2 className="artistash2">artistas</h2>
+      </div>
+      <motion.div className="sliderContainer">
+        <motion.div
+          className="slider"
+          drag="x"
+          dragConstraints={{ right: 0, left: -2650 }}
+        >
+          {Images.map((image) => (
+            <motion.div className="item">
+              <img className="imgSlider" src={image} alt="" />
+            </motion.div>
+          ))}
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </>
   );
 };
 

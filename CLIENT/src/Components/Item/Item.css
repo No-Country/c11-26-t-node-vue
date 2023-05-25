@@ -1,4 +1,10 @@
 
+  btninfo {
+    border: none;
+    color: none;
+    
+  }
+  
   .cardProducto {
     border-radius: 12px;
     background:#FFD829;
