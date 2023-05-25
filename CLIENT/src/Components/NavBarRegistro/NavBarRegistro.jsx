@@ -2,13 +2,16 @@ import "./NavBarRegistro.less";
 import "../../App.less";
 import { Link, NavLink } from "react-router-dom";
 import FrontPage from "../FrontPage/FrontPage";
+import Catalogo from "../Catalogo/Catalogo";
+import Carrusel from "../Carrusel/Carrusel";
+
 
 
 
 
 const NavBarRegistro = () => {
   return (
-
+    <>
     <section className="header">
     <div className="navbar">
       <Link to={"/"}>
@@ -29,7 +32,9 @@ const NavBarRegistro = () => {
     </div>
     <FrontPage />
   </section>
-    
+  <Catalogo />
+  
+  </>
   )
 }
 

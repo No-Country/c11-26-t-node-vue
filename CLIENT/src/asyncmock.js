@@ -88,12 +88,12 @@ const productos = [
 ]
 
 export const getProductos = () => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(productos);
-      }, 100);
-    });
-  };
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(productos);
+    }, 100);
+  });
+};
   
   
   
