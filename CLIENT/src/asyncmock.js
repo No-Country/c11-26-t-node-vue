@@ -5,6 +5,7 @@ const productos = [
         imagen: "../../assets/tapasdedisco/davidguetta.jpg",
         idCat: "dance",
         precio: 500,
+        stock: 10,
         background: "#FFD829"
       },
       {
@@ -12,6 +13,7 @@ const productos = [
         titulo: "Beyoncé 4| 2011",
         imagen: "../../assets/tapasdedisco/beyonce.jpg",
         idCat: "r&b",
+        stock: 10,
         precio: 500
       },
       {
@@ -19,6 +21,7 @@ const productos = [
         titulo: "The fame monster | 2010",
         imagen: "../../assets/tapasdedisco/gaga.jpg",
         idCat: "pop",
+        stock: 10,
         precio: 500
       },
       {
@@ -26,6 +29,7 @@ const productos = [
         titulo: "Nevermanind | 1991",
         imagen: "../../assets/tapasdedisco/nirvana.jpg",
         idCat: "rock",
+        stock: 10,
         precio: 500
       },
       {
@@ -33,6 +37,7 @@ const productos = [
         titulo: "Here | 2016",
         imagen: "../../assets/tapasdedisco/aliciakeys.jpg",
         idCat: "r&b",
+        stock: 10,
         precio: 500
       },
       {
@@ -40,6 +45,7 @@ const productos = [
         titulo: "Parachutes  | 2010",
         imagen: "../../assets/tapasdedisco/Coldplay.png",
         idCat: "rock",
+        stock: 10,
         precio: 500
       },
       {
@@ -47,6 +53,7 @@ const productos = [
         titulo: "Runaaway baby | 2010",
         imagen: "../../assets/tapasdedisco/brunomars.jpg",
         idCat: "pop",
+        stock: 10,
         precio: 500
       },
       {
@@ -54,6 +61,7 @@ const productos = [
         titulo: "Evolve | 2017",
         imagen: "../../assets/tapasdedisco/imagindragons.jpg",
         idCat: "rock",
+        stock: 10,
         precio: 500
       },
       {
@@ -61,6 +69,7 @@ const productos = [
         titulo: "Rey y sol | 2000",
         imagen: "../../assets/tapasdedisco/fito.jpg",
         idCat: "rock",
+        stock: 10,
         precio: 500
       },
       {
@@ -68,6 +77,7 @@ const productos = [
         titulo: "Happier than ever | 2021",
         imagen: "../../assets/tapasdedisco/billieeilish.jpg",
         idCat: "pop",
+        stock: 10,
         precio: 500
       },
       {
@@ -75,6 +85,7 @@ const productos = [
         titulo: "Recovery | 2010",
         imagen: "../../assets/tapasdedisco/eminen.jpg",
         idCat: "dance",
+        stock: 10,
         precio: 500
       },
       {
@@ -82,6 +93,7 @@ const productos = [
         titulo: "Adele 21 | 2011",
         imagen: "../../assets/tapasdedisco/adele.jpg",
         idCat: "pop",
+        stock: 10,
         precio: 500
       },
 

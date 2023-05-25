@@ -1,4 +1,3 @@
-import "./Catalogo.less";
 import "../../App.less";
 import { NavLink, Routes, Route } from "react-router-dom";
 import ItemListConteiner from "../ItemListConteiner/ItemListConteiner";
@@ -96,6 +95,7 @@ const Catalogo = () => {
           <Route path="/" element={<ItemListConteiner />} />
           <Route path="/:idCategoria" element={<ItemListConteiner />} />
           <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
+          <Route path="*" element={ <h2>Sitio en Construcción</h2> } />
         </Routes>
       </div>
       <Carrusel />

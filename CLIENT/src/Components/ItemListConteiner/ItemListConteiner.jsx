@@ -20,8 +20,7 @@ const ItemListConteiner = () => {
   }, [idCategoria]);
 
   return (
-    <div >
-      
+    <div>
       <ItemList productos={productos} />
     </div>
   );

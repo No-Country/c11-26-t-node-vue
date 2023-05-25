@@ -1,5 +1,10 @@
-
-  btninfo {
+  .cardProducto {
+   
+    text-decoration: none;
+  }
+  
+  
+  .btninfo {
     border: none;
     color: none;
     

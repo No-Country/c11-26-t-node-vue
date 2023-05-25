@@ -1,13 +1,12 @@
-import "./Item.css";
-import "../../App.less";
-import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Item.css';
+import '../../App.less';
 
 const Item = ({ id, titulo, precio, imagen, idCat, color }) => {
   const agregarProd = () => {
     console.log(id);
   };
-
 
   const colores = ['#FFD829', '#FE6927', '#FF80D9', '#4EAFFE', '#FE6927'];
   const [backgroundColor, setBackgroundColor] = useState('');
@@ -18,27 +17,16 @@ const Item = ({ id, titulo, precio, imagen, idCat, color }) => {
     setBackgroundColor(colorAleatorio);
   }, []);
 
-
   return (
-    <div className="cardProducto" style={{ backgroundColor }}>
-      
+    <Link to={`/item/${id}`} className="cardProducto" style={{ backgroundColor }}>
       <div className="contenedorCardArtista">
-      <img src={imagen} alt={titulo} className="imgCard" />
-      <div>
-      <span className="artista">{id}</span>
-      <span className="album">{titulo}</span>
-      <Link to={`/item/${id}`} className='btnInfo'style={{ backgroundColor }}></Link>
+        <img src={imagen} alt={titulo} className="imgCard" />
+        <div>
+          <span className="artista">{id}</span>
+          <span className="album">{titulo}</span>
+        </div>
       </div>
-      {
-        //<p>$ {precio}</p>
-        //<p>{id}</p>
-        //<p>{idCat}</p>
-        //<Link to={`/item/${id}`} className='btnInfo' > Info </Link>
-        //<button className='btnAgregar' onClick={ agregarProd }>AGREGAR</button>
-      }
-      </div>
-      
-    </div>
+    </Link>
   );
 };
 

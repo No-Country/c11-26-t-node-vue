@@ -1,13 +1,15 @@
 import Item from "../Item/Item";
-import './ItemList.css'
+import "./ItemList.css";
 import "../../App.less";
 
-const ItemList = ({productos}) => {
+const ItemList = ({ productos }) => {
   return (
     <div className="contendorProductos">
-      {productos.map(prod => <Item key={prod.id} {...prod} />)}
+      {productos.map((prod) => (
+        <Item key={prod.id} {...prod} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default ItemList
+export default ItemList;

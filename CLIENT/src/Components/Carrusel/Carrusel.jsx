@@ -1,4 +1,3 @@
-import "./Carrusel.css";
 import "../../App.less";
 import Images from "../../../assets/export/images";
 import { motion } from "framer-motion";
@@ -20,8 +19,8 @@ const Carrusel = () => {
           drag="x"
           dragConstraints={{ right: 0, left: -2650 }}
         >
-          {Images.map((image) => (
-            <motion.div className="item">
+          {Images.map((image, index) => (
+            <motion.div className="item" key={index}>
               <img className="imgSlider" src={image} alt="" />
             </motion.div>
           ))}

@@ -1,5 +1,5 @@
 import "../../App.less";
-import Carrusel from "../Carrusel/Carrusel";
+
 
 const FrontPage = () => {
   return (
