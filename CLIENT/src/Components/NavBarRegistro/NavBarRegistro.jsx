@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import FrontPage from "../FrontPage/FrontPage";
 import Catalogo from "../Catalogo/Catalogo";
 
-
 const NavBarRegistro = () => {
   return (
     <>
@@ -12,9 +11,10 @@ const NavBarRegistro = () => {
           <Link to={"/"}>
             <img src="/logo.png" alt="Logo" />
           </Link>
+
           <ul>
             <li>
-              <NavLink to={"/login"}>
+              <NavLink to={"/registro"}>
                 <button className="btnRegisto">Registro</button>
               </NavLink>
             </li>

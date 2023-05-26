@@ -1,37 +1,37 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function LoginForm() {
-  const [alias, setAlias] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
+  const [alias, setAlias] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Validaciones y enviar los datos del formulario
-    // a través de una API
-    console.log("Alias:", alias);
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
+    // a través de una API 
+    console.log('Alias:', alias);
+    console.log('Email:', email);
+    console.log('Password:', password);
+    console.log('Confirm Password:', confirmPassword);
 
     if (password !== confirmPassword) {
-      setError("Las contraseñas no coinciden");
-      return;
-    }
+        setError('Las contraseñas no coinciden');
+        return;
+      }
 
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-    setAlias("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-    setError("");
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+    setAlias('');
+    setEmail('');
+    setPassword('');
+    setConfirmPassword('');
+    setError('');
   };
 
   return (
-    <form className="formLogin" onSubmit={handleSubmit}>
+    <form className='formLogin' onSubmit={handleSubmit}>
       <h2>Iniciar sesión</h2>
       {error && <p>{error}</p>}
       <div>
