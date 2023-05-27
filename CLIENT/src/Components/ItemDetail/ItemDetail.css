@@ -3,16 +3,13 @@
   width: 100%;
   background: linear-gradient(180deg, #1e003e 50%, #000000 100%);
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: 716px 1fr;
   justify-items: stretch;
   align-items: stretch;
 }
 
 .artistaDetail {
   height: 78px;
-  
-  margin-top: 139px;
-
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -28,17 +25,15 @@
 }
 
 .contenedorPrecioDetail {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 225px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .precioDetail {
   height: 24px;
   left: 1320px;
   top: 225px;
-
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -56,7 +51,6 @@
   height: 24px;
   left: 782px;
   top: 225px;
-
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -77,18 +71,22 @@
   letter-spacing: 0em;
   text-align: left;
   color: #eaebed;
+  margin-top: 60px;
 }
 
-.contendorDetail {
+.contenedorDetail {
+  padding-left: 66px;
+  padding-right: 66px;
 }
 
 .imgItemDetail {
-  width: 716px;
-  height: 960px;
-  left: 0px;
-  top: 0px;
-}
+  width: 751px;
 
+  margin-left: 0px;
+  margin-top: 0;
+  margin-bottom: 249px;
+  object-fit: contain;
+}
 .corazonVacio {
   cursor: pointer;
   height: 21.096025466918945px;
@@ -101,15 +99,17 @@
 
 .navDetail {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 58.92px;
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
 .ulDetail {
   list-style: none;
   display: flex;
+  padding-inline-start: 0;
 }
 
 .liDetail {
@@ -129,4 +129,178 @@
   /* Color 2 */
 
   color: #eaebed;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.btnDetail {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 28px;
+}
+
+.btnCanciones {
+  width: 76px;
+  height: 20px;
+  background: none;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+.btnResumen {
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 8px;
+  cursor: pointer;
+  width: 92px;
+  height: 40px;
+
+  /* Color 4 */
+  color: #303030;
+  background: #4eaffe;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.btnCanciones.clicked {
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 8px;
+  cursor: pointer;
+  width: 92px;
+  height: 40px;
+
+  /* Color 4 */
+  color: #303030;
+  background: #4eaffe;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.btnResumen.clicked {
+  width: 76px;
+  height: 20px;
+  background: none;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+.btnConteCompra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnCompra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  cursor: pointer;
+
+  width: 315px;
+  height: 40px;
+  left: 921px;
+  top: 796px;
+  color: #eaebed;
+  /* Color 6 */
+  border: none;
+  background: #fe6927;
+  border-radius: 100px;
+}
+
+.btnCarrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  cursor: pointer;
+  color: #eaebed;
+  width: 315px;
+  height: 40px;
+  left: 921px;
+  top: 796px;
+
+  /* Color 6 */
+  border: 2px solid #eaebed;
+  background: none;
+  border-radius: 100px;
+}
+
+.listaCanciones {
+  list-style: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  /* identical to box height, or 160% */
+
+  
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+
+.lineaSeparacion {
+  border-top: 1px solid black;
+  margin: 10px 0;
+}
+
+.play {
+ color: #eaebed;
+ height: 11px;
+ margin-right: 22.5px;
 }
