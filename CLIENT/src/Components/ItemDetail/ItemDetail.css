@@ -1,24 +1,132 @@
 .contenedorItem {
-    background: rgb(191, 188, 188);
-    border: 1px solid black;
-    border-radius: 15px;
-    text-align: center;
-    margin: 20px;
-    /*display: flex;
-    flex-direction: row;
-    justify-content: center;
+  height: 960px;
+  width: 100%;
+  background: linear-gradient(180deg, #1e003e 50%, #000000 100%);
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.artistaDetail {
+  height: 78px;
+  
+  margin-top: 139px;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 78px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+.contenedorPrecioDetail {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;*/
+    margin-top: 225px;
+}
+
+.precioDetail {
+  height: 24px;
+  left: 1320px;
+  top: 225px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  text-transform: uppercase;
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+.tituloDetail {
+  height: 24px;
+  left: 782px;
+  top: 225px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  /* Color 2 */
+
+  color: #eaebed;
 }
 
 .parrafoItem {
-    color: black;
-    font-size: 30px;
-    margin: 10px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #eaebed;
 }
 
+.contendorDetail {
+}
 
-.imgItem {
-    width: 13em;
+.imgItemDetail {
+  width: 716px;
+  height: 960px;
+  left: 0px;
+  top: 0px;
+}
 
+.corazonVacio {
+  cursor: pointer;
+  height: 21.096025466918945px;
+  width: 24.009681701660156px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  margin-right: 57px;
+}
+
+.navDetail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 58.92px;
+}
+
+.ulDetail {
+  list-style: none;
+  display: flex;
+}
+
+.liDetail {
+  height: 20px;
+  left: 782px;
+  top: 59px;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  /* Color 2 */
+
+  color: #eaebed;
 }
