@@ -1,6 +1,6 @@
 import "./App.less";
 import Footer from "./Components/Footer/Footer";
-import { Route, Routes, NavLink, Link } from "react-router-dom";
+import { Route, Routes , Link } from "react-router-dom";
 import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner";
 import ItemDetailConteiner from "./Components/ItemDetailConteiner/ItemDetailConteines";
 import Carrusel from "./Components/Carrusel/Carrusel";
