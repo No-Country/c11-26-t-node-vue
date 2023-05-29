@@ -1,19 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap');
+
+.yellow {
+  color: #ffd829;
+}
+
 .home {
-  background: linear-gradient(180deg, #000000 50%, #1E003E 100% );
+  background: linear-gradient(180deg, #000000 50%, #1E003E 100%);
   height: 3480px;
 }
 
 .welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 96%;
   height: 362px;
+  margin-top: 50px;
   background: linear-gradient(268.87deg, #4EAFFE 0.48%, #1E003E 51.63%, #0A0015 99.04%);
   border-radius: 0px 239px 239px 0px;
+  overflow: visible;
+
+  img {
+    width: 400px;
+    margin-right: 55px;
+  }
+
+  .welcome-text {
+    margin-left: 160px;
+    color: #eaebed;
+
+    h3 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 90%;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    h1 {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 59px;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .navbar {
-  
   color: white;
   display: flex;
   height: 138px;
   justify-content: space-between;
+
+  .left-navbar {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    img {
+      width: 70px;
+      margin-left: 45px;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      margin: 0 45px 0 0;
+      padding: 0;
+      overflow: hidden;
+      gap: 70px;
+
+      li {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .right-navbar {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .searchbar {
+      display: flex;
+      width: 328px;
+      height: 40px;
+      border: 1.5px solid #EAEBED;
+      border-radius: 28px;
+    }
+
+    input {
+      margin-left: 20px;
+      width: 280px;
+      height: 40px;
+      border: none;
+      background: none;
+      border-radius: 28px;
+      outline: none;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #eaebed;
+    }
+
+    button {
+      height: 40px;
+      border: none;
+    }
+  }
+}
+
+.iconic, .catalog {
+  margin: 0 160px;
+  h2, img {
+    display: inline-block;
+  }
+  h2 {
+    text-align: ce;
+    color: white;
+  }
+  img {
+    width: 32px;
+  }
 }
