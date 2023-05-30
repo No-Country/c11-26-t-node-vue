@@ -7,6 +7,7 @@ import NavBarRegistro from "./Components/NavBarRegistro/NavBarRegistro";
 import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner";
 import ItemDetailConteiner from "./Components/ItemDetailConteiner/ItemDetailConteines";
 import Home from "./Components/Home/Home";
+import InicioSesion from "./Components/InicioSesion/InicioSesion";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/:idCategoria" element={<ItemListConteiner />} />
         <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/iniciarsesion" element={ <InicioSesion /> }/>
       </Routes>
       <Footer />
     </BrowserRouter>
