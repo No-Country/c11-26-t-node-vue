@@ -39,8 +39,8 @@ const ItemDetail = ({ id, titulo, precio, imagen, stock }) => {
     <div className="contenedorDetail">
       <div className="navDetail">
         <ul className="ulDetail">
-          <li className="liDetail">INICIO/</li>
-          <li className="liDetail">CATALOGO/</li>
+          <Link to='/home' className="liDetail1">INICIO/</Link>
+          <Link to='/catalogo' className="liDetail2">CATALOGO/</Link>
         </ul>
         <Corazon id={id} />
       </div>

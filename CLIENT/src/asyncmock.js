@@ -1,6 +1,6 @@
 const productos = [
     {
-        id: "Bavid Guetta",
+        id: "david Guetta",
         titulo: "Nothing but the beat | 2011",
         imagen: "../../assets/tapasdedisco/davidguetta.jpg",
         idCat: "dance",

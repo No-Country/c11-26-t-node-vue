@@ -15,12 +15,9 @@
   font-weight: 800;
   font-size: 64px;
   line-height: 78px;
-  /* identical to box height */
-
+  margin-top: 0;
+  margin-bottom: 0;
   text-transform: uppercase;
-
-  /* Color 2 */
-
   color: #eaebed;
 }
 
@@ -94,7 +91,6 @@
   border-radius: 0px;
   display: flex;
   align-items: center;
-  margin-right: 57px;
 }
 
 .navDetail {
@@ -112,7 +108,7 @@
   padding-inline-start: 0;
 }
 
-.liDetail {
+.liDetail1 {
   height: 20px;
   left: 782px;
   top: 59px;
@@ -122,16 +118,32 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 19.5px;
-  /* identical to box height */
-
   text-transform: uppercase;
-
-  /* Color 2 */
-
+  text-decoration: none;
   color: #eaebed;
   display: flex;
   justify-content: left;
   align-items: center;
+  
+}
+
+.liDetail2 {
+  height: 20px;
+  left: 782px;
+  top: 59px;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eaebed;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 5px;
 }
 
 .btnDetail {
@@ -286,13 +298,10 @@
   line-height: 24px;
   /* identical to box height, or 160% */
 
-  
-
   /* Color 2 */
 
   color: #eaebed;
 }
-
 
 .lineaSeparacion {
   border-top: 1px solid black;
@@ -300,7 +309,92 @@
 }
 
 .play {
- color: #eaebed;
- height: 11px;
- margin-right: 22.5px;
+  color: #eaebed;
+  height: 11px;
+  margin-right: 22.5px;
+}
+
+/* Estilos para pantallas móviles */
+@media screen and (max-width: 340px) {
+  .contenedorItem {
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1;
+  }
+
+  .imgItemDetail {
+    width: 100%;
+  }
+
+  .contenedorDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10%;
+    padding-right: 10px;
+  }
+
+  .navDetail {
+    padding-left: 10%;
+    padding-right: 10px;
+  }
+
+  .ulDetail {
+  }
+
+  .liDetail {
+  }
+
+  .artistaDetail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    padding-left: 10%;
+    padding-right: 10px;
+  }
+
+  .contenedorPrecioDetail {
+  }
+
+  .tituloDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 10%;
+    padding-right: 10px;
+  }
+
+  .precioDetail {
+    
+    padding-right: 15px;
+  }
+
+
+
+  .btnDetail {
+    padding-left: 10%;
+    
+  }
+
+  .btnCanciones,
+  .btnResumen {
+    
+  }
+
+  .listaCanciones {
+  }
+
+  .parrafoItem {
+    padding-left: 10%;
+    padding-right: 10px;
+
+  }
+
+  .btnConteCompra {
+  }
+
+  .btnCompra,
+  .btnCarrito {
+  }
 }

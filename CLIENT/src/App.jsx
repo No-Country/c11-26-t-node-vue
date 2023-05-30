@@ -6,6 +6,8 @@ import LoginForm from "./Components/LoginForm/LoginForm";
 import NavBarRegistro from "./Components/NavBarRegistro/NavBarRegistro";
 import ItemListConteiner from "./Components/ItemListConteiner/ItemListConteiner";
 import ItemDetailConteiner from "./Components/ItemDetailConteiner/ItemDetailConteines";
+import Home from "./Components/Home/Home";
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route path="/categoria" element={<ItemListConteiner />} />
         <Route path="/:idCategoria" element={<ItemListConteiner />} />
         <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
       <Footer />
     </BrowserRouter>
