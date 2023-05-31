@@ -47,25 +47,15 @@ router.get('/login', async (req, res) => {
 });
 router.post('/register',async(req,res)=>{
   try {
+    
     const {
-        name,
-        lastname,
-        identity,
+        name:alias,
+        password,
         email,
-        phone,
-        userName,
-        password
     }= req.body;
-    if(!name)
-        throw "NOMBRE ES REQUERIDO";
-    if(!lastname)
-        throw "APELLIDO ES REQUERIDO";
-    if(!identity)
-        throw "IDENTIDAD ES REQUERIDA PARA ALGUNA FACTURA";
+    if (!alias) throw 'NOMBRE ES REQUERIDO';
     if(!email)
         throw "EMAIL ES REQUERIDO";
-    if(!userName)
-        throw "NOMBRE DE USUARIO ES REQUERIDO";
     if(!password)
         throw "CONTRASEÑA ES REQUERIDA";
     const bcrypt = require('bcrypt');
@@ -73,24 +63,17 @@ router.post('/register',async(req,res)=>{
     const pass = bcrypt.hashSync(password, saltRounds);
      
     //valid if user alredy exist 
-    const userDB = await User.findOne({
-        $or: [{ 'user.name': userName }, { 'user.email': email }],
-      });
+    const userDB = await User.findOne({ $or: [{ 'email': email }] });
       if (userDB) {
-        throw 'Usuario o email Ya registrados';
+        throw 'Email Ya registrados';
       }
-    const full_name=`${name} ${lastname}`;
     const newUserDBInsert = new M_person({
-        full_name,
-        name,
-        lastname,
-        identity,
-        email,
-        phone,
-        user:{
-            name:userName,
-            password:pass
-        }
+      name: alias,
+      email,
+      user: {
+        name: email,
+        password: pass,
+      },
     });
     let newUserDB= await newUserDBInsert.save();
     delete newUserDB.user.password;

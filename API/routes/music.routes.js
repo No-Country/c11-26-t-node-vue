@@ -148,4 +148,25 @@ router.get('/get/music/artist', async (req, res) => {
 });
 
 
+ const { M_music,M_album,M_artist } = require('../models/music');
+router.get('/artist', async (req, res) => {
+  try {
+   
+     const artistDB = await M_artist.find();   
+   
+    res.json({
+      result: 1,
+      data: artistDB.map(a=>a),
+    });
+  } catch (error) {
+    let message;
+    if (error instanceof Error) message = error.message;
+    else message = String(error);
+    res.json({
+      result: 0,
+      message,
+    });
+  }
+});
+
 module.exports = router;
