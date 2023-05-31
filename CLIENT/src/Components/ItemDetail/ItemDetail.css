@@ -1,24 +1,400 @@
 .contenedorItem {
-    background: rgb(191, 188, 188);
-    border: 1px solid black;
-    border-radius: 15px;
-    text-align: center;
-    margin: 20px;
-    /*display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;*/
+  height: 960px;
+  width: 100%;
+  background: linear-gradient(180deg, #1e003e 50%, #000000 100%);
+  display: grid;
+  grid-template-columns: 716px 1fr;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.artistaDetail {
+  height: 78px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 78px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #eaebed;
+}
+
+.contenedorPrecioDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.precioDetail {
+  height: 24px;
+  left: 1320px;
+  top: 225px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  text-transform: uppercase;
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+.tituloDetail {
+  height: 24px;
+  left: 782px;
+  top: 225px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  /* Color 2 */
+
+  color: #eaebed;
 }
 
 .parrafoItem {
-    color: black;
-    font-size: 30px;
-    margin: 10px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #eaebed;
+  margin-top: 60px;
 }
 
+.contenedorDetail {
+  padding-left: 66px;
+  padding-right: 66px;
+}
 
-.imgItem {
-    width: 13em;
+.imgItemDetail {
+  width: 751px;
 
+  margin-left: 0px;
+  margin-top: 0;
+  margin-bottom: 249px;
+  object-fit: contain;
+}
+.corazonVacio {
+  cursor: pointer;
+  height: 21.096025466918945px;
+  width: 24.009681701660156px;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.navDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 58.92px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.ulDetail {
+  list-style: none;
+  display: flex;
+  padding-inline-start: 0;
+}
+
+.liDetail1 {
+  height: 20px;
+  left: 782px;
+  top: 59px;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eaebed;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  
+}
+
+.liDetail2 {
+  height: 20px;
+  left: 782px;
+  top: 59px;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eaebed;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.btnDetail {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 28px;
+}
+
+.btnCanciones {
+  width: 76px;
+  height: 20px;
+  background: none;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+.btnResumen {
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 8px;
+  cursor: pointer;
+  width: 92px;
+  height: 40px;
+
+  /* Color 4 */
+  color: #303030;
+  background: #4eaffe;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.btnCanciones.clicked {
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 8px;
+  cursor: pointer;
+  width: 92px;
+  height: 40px;
+
+  /* Color 4 */
+  color: #303030;
+  background: #4eaffe;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.btnResumen.clicked {
+  width: 76px;
+  height: 20px;
+  background: none;
+  border: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+.btnConteCompra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnCompra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  cursor: pointer;
+
+  width: 315px;
+  height: 40px;
+  left: 921px;
+  top: 796px;
+  color: #eaebed;
+  /* Color 6 */
+  border: none;
+  background: #fe6927;
+  border-radius: 100px;
+}
+
+.btnCarrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  cursor: pointer;
+  color: #eaebed;
+  width: 315px;
+  height: 40px;
+  left: 921px;
+  top: 796px;
+
+  /* Color 6 */
+  border: 2px solid #eaebed;
+  background: none;
+  border-radius: 100px;
+}
+
+.listaCanciones {
+  list-style: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  /* identical to box height, or 160% */
+
+  /* Color 2 */
+
+  color: #eaebed;
+}
+
+.lineaSeparacion {
+  border-top: 1px solid black;
+  margin: 10px 0;
+}
+
+.play {
+  color: #eaebed;
+  height: 11px;
+  margin-right: 22.5px;
+}
+
+/* Estilos para pantallas móviles */
+@media screen and (max-width: 340px) {
+  .contenedorItem {
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1;
+  }
+
+  .imgItemDetail {
+    width: 100%;
+  }
+
+  .contenedorDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10%;
+    padding-right: 10px;
+  }
+
+  .navDetail {
+    padding-left: 10%;
+    padding-right: 10px;
+  }
+
+  .ulDetail {
+  }
+
+  .liDetail {
+  }
+
+  .artistaDetail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    padding-left: 10%;
+    padding-right: 10px;
+  }
+
+  .contenedorPrecioDetail {
+  }
+
+  .tituloDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 10%;
+    padding-right: 10px;
+  }
+
+  .precioDetail {
+    
+    padding-right: 15px;
+  }
+
+
+
+  .btnDetail {
+    padding-left: 10%;
+    
+  }
+
+  .btnCanciones,
+  .btnResumen {
+    
+  }
+
+  .listaCanciones {
+  }
+
+  .parrafoItem {
+    padding-left: 10%;
+    padding-right: 10px;
+
+  }
+
+  .btnConteCompra {
+  }
+
+  .btnCompra,
+  .btnCarrito {
+  }
 }
