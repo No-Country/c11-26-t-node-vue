@@ -1,20 +1,10 @@
-.cardProducto {
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem;*/
-    
-  }
 
   .cardProducto {
     border-radius: 12px;
-    background-color: #615f5f;
-    height: 260PX;
+    background:#FFD829;
+    height: 280PX;
     width: 181px;
     margin-bottom: 32px;
-    box-shadow: 0 2px 2px rgba(2, 252, 194, 0.724);
     transition: all 0.25s;
     
   }
@@ -25,27 +15,56 @@
   }
   
 
-  h3  {
-    color: #fafafa;
-    font-size: 20px;
-  }
+.contenedorCardArtista {
+  display: flex;
+  flex-direction: column;
+}
 
-  p {
-    font-size: 15px;
-    color: #fafafa;
-  }
+
+ .artista {
+  display: flex;
+  flex-direction: column;
+  color: #1D1B20;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  margin-left: 14px;
+  margin-top: 20PX;
+  
+  
+  
+  
+
+ }
+
+ .album {
+  
+  color: #49454F;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+  margin-left: 14px;
+  
+  
+ }
 
 .imgCard {
     width: 181px;
     height: 184px;
     border-radius: 12px 12px 0 0;
+    border: none;
+    
     
 }
 
 .btnAgregar {
   border: none;
   border-radius: 25px;
-  background: aqua;
   font-size: 15px;
 }
 

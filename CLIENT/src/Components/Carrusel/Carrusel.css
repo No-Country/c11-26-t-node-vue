@@ -1,0 +1,34 @@
+.sliderContainer {
+    margin: 0 auto;
+    overflow-x: hidden;
+    margin-bottom: 60px;
+    margin-top: 80px;
+    border: none;
+}
+
+
+.slider {
+    display: flex;
+    cursor: pointer;
+}
+
+.item {
+     
+    padding: 0;
+}
+
+.imgSlider {
+    height: 542px;
+    width: 438px;
+    pointer-events: none;
+    padding: 0;
+    margin: O;
+}
+
+@media screen and (max-width: 340px) {
+    .imgSlider {
+        height: 4870spx;
+        width: 390px;
+        pointer-events: none;
+    }
+}
