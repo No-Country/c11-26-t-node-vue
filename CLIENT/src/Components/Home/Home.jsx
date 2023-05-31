@@ -1,3 +1,4 @@
+
 import logo from "../../../assets/logo.svg";
 import kid_music from "../../../assets/home-icons/kid-listens-music.svg";
 import { RxMagnifyingGlass } from "react-icons/rx";
@@ -22,6 +23,7 @@ function Home() {
     }
   };
 
+
   return (
     <>
       <div className="home">
@@ -36,6 +38,7 @@ function Home() {
           </div>
           <div className="right-navbar">
             <div className="searchbar">
+
               <input 
               type="text"
               value={searchTerm}
@@ -52,10 +55,12 @@ function Home() {
             <div className="avatarHome">
               <RxAvatar />
             </div>
+
           </div>
         </section>
         <section className="welcome">
           <div className="welcome-text">
+
             <h3>
               Te damos la bienvenida, <span>Nombre.</span>
             </h3>
@@ -63,10 +68,12 @@ function Home() {
               ¡vamos a disfrutar <br /> de la{" "}
               <span className="yellow">música</span> a lo grande!
             </h1>
+
           </div>
           <img src={kid_music} alt="Chico escuchando musica" />
         </section>
         <section className="iconic">
+
           <img
             className="imgStar"
             src={"../../../assets/home-icons/circular-star.svg"}
@@ -140,3 +147,4 @@ function Home() {
 }
 
 export default Home;
+
