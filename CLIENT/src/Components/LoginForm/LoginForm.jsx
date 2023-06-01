@@ -44,10 +44,12 @@ function LoginForm() {
       switch(res.result){
         case 1:
           //login is ok
-            setAlias("");
+          setAlias("");
           setEmail("");
           setPassword("");
           setConfirmPassword("");
+          
+          //localStorage.setItem("lastUserAlias", alias);
 
           setError( <p className="exitoUser">Usuario registrado exitosamente, puede iniciar sesión</p> );
           break;
@@ -55,7 +57,7 @@ function LoginForm() {
           throw res.message;
       }
     }).catch(err=>{
-         setError(<p className="exitoUser">ssss</p>);
+         setError(<p className="exitoUser">Error</p>);
        alert(err);
     })
   };

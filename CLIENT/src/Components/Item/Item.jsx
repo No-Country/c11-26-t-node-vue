@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import './Item.css';
 import '../../App.less';
 
-const Item = ({ id, titulo, precio, imagen, idCat, color }) => {
+const Item = ({ _id, title, precio, imagen, idCat, color }) => {
   const agregarProd = () => {
-    console.log(id);
+    console.log(_id);
   };
 
   const colores = ['#FFD829', '#FE6927', '#FF80D9', '#4EAFFE', '#FE6927'];
@@ -18,12 +18,12 @@ const Item = ({ id, titulo, precio, imagen, idCat, color }) => {
   }, []);
 
   return (
-    <Link to={`/item/${id}`} className="cardProducto" style={{ backgroundColor }}>
+    <Link to={`/item/${_id}`} className="cardProducto" style={{ backgroundColor }}>
       <div className="contenedorCardArtista">
-        <img src={imagen} alt={titulo} className="imgCard" />
+        <img src={imagen} alt={title} className="imgCard" />
         <div>
-          <span className="artista">{id}</span>
-          <span className="album">{titulo}</span>
+          <span className="artista">{_id}</span>
+          <span className="album">{title}</span>
         </div>
       </div>
     </Link>
@@ -31,3 +31,4 @@ const Item = ({ id, titulo, precio, imagen, idCat, color }) => {
 };
 
 export default Item;
+
