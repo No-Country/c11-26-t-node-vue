@@ -1,16 +1,26 @@
-
 import logo from "../../../assets/logo.svg";
 import kid_music from "../../../assets/home-icons/kid-listens-music.svg";
 import { RxMagnifyingGlass } from "react-icons/rx";
 import { RxAvatar } from "react-icons/rx";
 import "./Home.less";
 import CatalogoHome from "../CatalogoHome/CatalogoHome";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [alias, setAlias] = useState("");
+
+  useEffect(() => {
+    const storedAlias = localStorage.getItem("alias");
+    if (storedAlias) {
+      setAlias(storedAlias);
+    }
+  }, []);
+
   const handleSearch = () => {
     
     console.log('Realizando búsqueda con el término:', searchTerm);
@@ -23,22 +33,20 @@ function Home() {
     }
   };
 
-
   return (
     <>
       <div className="home">
         <section className="navbar">
           <div className="left-navbar">
-            <img src={logo} alt="" />
-            <ul>
-              <li>Inicio</li>
-              <li>Catalogo</li>
-              <li>Artistas</li>
+            <img src={logo} alt="Logo" />
+            <ul className="ulHome">
+              <Link className="linkHome"  to='/'> <span className="inicio">Inicio</span></Link>
+              <Link className="linkHome" ><span className="inicio">Catálogo</span></Link>
+              <Link className="linkHome" ><span className="inicio">Artistas</span></Link>
             </ul>
           </div>
           <div className="right-navbar">
             <div className="searchbar">
-
               <input 
               type="text"
               value={searchTerm}
@@ -49,31 +57,25 @@ function Home() {
                  <RxMagnifyingGlass />
               </button>
             </div>
-            <Link to='/cart'>
-              <img src={"../../../assets/home-icons/shopping-cart.svg"} alt="Cart" />
-            </Link>
+            <CartWidget />
             <div className="avatarHome">
               <RxAvatar />
             </div>
-
           </div>
         </section>
         <section className="welcome">
           <div className="welcome-text">
-
             <h3>
-              Te damos la bienvenida, <span>Nombre.</span>
+              Te damos la bienvenida, <span>{alias}.</span>
             </h3>
             <h1>
               ¡vamos a disfrutar <br /> de la{" "}
               <span className="yellow">música</span> a lo grande!
             </h1>
-
           </div>
           <img src={kid_music} alt="Chico escuchando musica" />
         </section>
         <section className="iconic">
-
           <img
             className="imgStar"
             src={"../../../assets/home-icons/circular-star.svg"}

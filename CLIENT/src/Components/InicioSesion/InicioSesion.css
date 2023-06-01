@@ -1,212 +1,212 @@
 .loginConteiner {
-    position: absolute;
-    width: 100%;
-    height: 960px;
-    background: linear-gradient(180deg, rgba(30, 0, 62, 0.65) 50%, #000000 100%);
-  }
+  position: absolute;
+  width: 100%;
+  height: 960px;
+  background: linear-gradient(180deg, rgba(30, 0, 62, 0.65) 50%, #000000 100%);
+}
+
+.degradeFondo {
+  position: absolute;
+  width: 100%;
+  height: 960px;
+  background: linear-gradient(180deg, rgba(30, 0, 62, 0.65) 50%, #000000 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formLogin {
+  width: 537px;
+  height: 870px;
+  margin-top: 45px;
+  margin-right: 5%;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoLogin {
+  height: 96.58;
+  width: 100px;
+
+  display: flex;
+}
+
+.creaLogin {
+  width: 294px;
+  height: 39px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* Color 1 */
+
+  color: #303030;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.labelLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.showPasswordButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+.inputLogin {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 90%;
+  color: #303030;
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  width: 350px;
+  height: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #49454f;
+}
+
+.inputpassword {
+  width: 350px;
+  height: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #49454f;
+}
+
+.btnRegist {
+  text-decoration: none;
+  width: 375px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background: #ff80d9;
+  border-radius: 100px;
+  margin-top: 20px;
+  color: #eaebed;
+}
+
+.h4login {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 9px;
+}
+
+.spanLogin {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: #fe6927;
+  text-decoration: none;
+}
+
+.loginh4 {
+  width: 200px;
+  height: 16px;
+  left: 976px;
+  top: 848px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #303030;
+  display: flex;
+  flex-direction: row;
+}
+
+.conteIniciar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.mjBienvenida {
+  margin: 0;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 23%;
   
-  .degradeFondo {
-    position: absolute;
-    width: 100%;
-    height: 960px;
-    background: linear-gradient(180deg, rgba(30, 0, 62, 0.65) 50%, #000000 100%);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .formLogin {
-    width: 537px;
-    height: 870px;
-    margin-top: 45px;
-    margin-right: 5%;
-    background: #ffffff;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logoLogin {
-    height: 96.58;
-    width: 100px;
-  
-    display: flex;
-  }
-  
-  .creaLogin {
-    width: 294px;
-    height: 39px;
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 39px;
-    /* identical to box height */
-  
-    text-align: center;
-  
-    /* Color 1 */
-  
-    color: #303030;
-  
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .labelLogin {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
-  }
-  
-  .showPasswordButton {
-    border: none;
-    background: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .inputLogin {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 90%;
-    color: #303030;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .input {
-    width: 350px;
-    height: 40px;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    color: #49454f;
-  }
-  
-  .inputpassword {
-    width: 350px;
-    height: 40px;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    color: #49454f;
-  }
-  
-  .btnRegist {
-    text-decoration: none;
-    width: 375px;
-    height: 40px;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-    border: none;
-    background: #ff80d9;
-    border-radius: 100px;
-    margin-top: 20px;
-    color: #eaebed;
-  }
-  
-  .h4login {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    margin-top: 9px;
-  }
-  
-  .spanLogin {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    color: #fe6927;
-    text-decoration: none;
-  }
-  
-  .loginh4 {
-    width: 200px;
-    height: 16px;
-    left: 976px;
-    top: 848px;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    text-align: center;
-    color: #303030;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .conteIniciar {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-  
-  .mjBienvenida {
-    margin: 0;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 23%;
-    
+
+
   
   
-    
-    
-  }
+}
+
+.bienvenida {
+  width: 661px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  text-align: center;
+  color: #eaebed;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   
-  .bienvenida {
-    width: 661px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    font-size: 48px;
-    text-align: center;
-    color: #eaebed;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-  }
-  
-  .explora {
-    width: 545px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 120%;
-    text-align: center;
-    color: #eaebed;
-  }
-  
-  /* Div contenedor de todo el componente  */
-  .conte{
-     
-     display: flex;
-  
-  }
+}
+
+.explora {
+  width: 545px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: #eaebed;
+}
+
+/* Div contenedor de todo el componente  */
+.conte{
+   
+   display: flex;
+
+}

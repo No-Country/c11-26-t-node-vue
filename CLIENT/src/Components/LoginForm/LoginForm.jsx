@@ -6,6 +6,7 @@ import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
 function LoginForm() {
   const [alias, setAlias] = useState("");
   const [email, setEmail] = useState("");
+ 
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -23,7 +24,10 @@ function LoginForm() {
       );
       return;
     }
+    
 
+
+    localStorage.setItem("alias", alias);
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
     setAlias("");

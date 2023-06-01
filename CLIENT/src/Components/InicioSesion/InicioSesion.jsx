@@ -1,7 +1,7 @@
 import './InicioSesion.css';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { RiEyeCloseLine, RiEyeLine } from "react-icons/ri";
+import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
 
 const InicioSesion = () => {
   const [email, setEmail] = useState("");
@@ -77,7 +77,7 @@ const InicioSesion = () => {
               onClick={togglePasswordVisibility}
               className="showPasswordButton"
             >
-              {showPassword ? <RiEyeCloseLine /> : <RiEyeLine />}
+              {showPassword ? <RxEyeOpen /> : <RxEyeNone />}
             </button>
           </div>
 
