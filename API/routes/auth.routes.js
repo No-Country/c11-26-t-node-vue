@@ -63,7 +63,7 @@ router.post('/register',async(req,res)=>{
     const pass = bcrypt.hashSync(password, saltRounds);
      
     //valid if user alredy exist 
-    const userDB = await User.findOne({ $or: [{ 'email': email }] });
+    const userDB = await M_person.findOne({ $or: [{ email: email }] });
       if (userDB) {
         throw 'Email Ya registrados';
       }
