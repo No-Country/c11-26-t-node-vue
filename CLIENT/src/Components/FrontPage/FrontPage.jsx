@@ -30,9 +30,7 @@ const FrontPage = () => {
             Encuentra tus artistas favoritos, géneros apasionantes y álbumes
             icónicos. ¡Empieza a disfrutar de la música que amas hoy mismo!
           </p>
-          <div className="btnConteExplorar">
-            <button className="btnExplorar">Explorar ahora</button>
-          </div>
+          
         </div>
         <div className="logoContenedor">
           <div className="contenedorEPequena">
