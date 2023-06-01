@@ -210,3 +210,10 @@
    display: flex;
 
 }
+
+.exitoUser {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: 17px;
+  color: #49454f;
+}

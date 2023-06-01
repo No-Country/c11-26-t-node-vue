@@ -6,14 +6,13 @@ import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
 function LoginForm() {
   const [alias, setAlias] = useState("");
   const [email, setEmail] = useState("");
- 
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -24,17 +23,41 @@ function LoginForm() {
       );
       return;
     }
-    
 
+    try {
+      const response = await fetch("https://nocountry.clopezpro.com/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          alias: alias,
+          email: email,
+          password: password
+        })
+      });
 
-    localStorage.setItem("alias", alias);
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-    setAlias("");
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-    setError("");
+      if (response.ok) {
+        // Registro exitoso
+        setAlias("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+
+        localStorage.setItem("lastUserAlias", alias);
+
+        setError( <p className="exitoUser">Usuario registrado exitosamente, puede iniciar sesión</p> );
+      } else {
+        // Manejar errores de la solicitud
+        setError( <p className="exitoUser">Error al registrar el usuario</p>);
+      }
+    } catch (error) {
+      // Manejar errores de la solicitud
+      setError(<p className="exitoUser">Error al registrar el usuario</p>);
+    }
+    console.log("Alias:", alias);
+    console.log("Email:", email);
+    console.log("Password:", password);
   };
 
   const togglePasswordVisibility = () => {
@@ -136,7 +159,6 @@ function LoginForm() {
               {showConfirmPassword ? <RxEyeOpen /> : <RxEyeNone />}
             </button>
           </div>
-
           <button className="btnRegist" type="submit">
             Registrarse
           </button>
