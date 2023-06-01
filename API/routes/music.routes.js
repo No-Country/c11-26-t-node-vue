@@ -168,5 +168,24 @@ router.get('/artist', async (req, res) => {
     });
   }
 });
+router.get('/album', async (req, res) => {
+  try {
+   
+     const albumDB = await M_album.find();   
+   
+    res.json({
+      result: 1,
+      data: albumDB.map(a=>a),
+    });
+  } catch (error) {
+    let message;
+    if (error instanceof Error) message = error.message;
+    else message = String(error);
+    res.json({
+      result: 0,
+      message,
+    });
+  }
+});
 
 module.exports = router;

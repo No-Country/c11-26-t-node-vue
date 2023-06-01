@@ -2,23 +2,40 @@ import './InicioSesion.css';
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
 
 const InicioSesion = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(handleSubmit);
-
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-    setEmail("");
-    setPassword("");
-    setError("");
+     fetch(`https://nocountry.clopezpro.com/auth/login?user=${email}&pass=${password}`).then((res) => {
+      if (res.status === 200) {
+        return res.json();
+      } else {
+        console.log("Login incorrecto");
+      }
+    }).then(res=>{
+      
+      switch(res.result){
+        case 1:
+          //login is ok
+          localStorage.setItem("token", res.token);
+          setEmail("");
+          setPassword("");
+          setError("");
+          navigate('/home', { replace: true });
+          break;
+        default:
+          throw res.message;
+      }
+    }).catch(err=>{
+       setError(err);
+       alert(err);
+    })
   };
 
   const togglePasswordVisibility = () => {

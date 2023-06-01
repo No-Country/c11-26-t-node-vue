@@ -14,7 +14,7 @@ router.get('/login', async (req, res) => {
         const jwt = require('jsonwebtoken');
         const secretToken = process.env.SECRET_JWT_SEED;
         const expiresIn = process.env.JWT_EXPIRE_IN;
-        const userDB = await M_person.findOne({ 'user.name': user });   
+        const userDB = await M_person.findOne({ 'email': user });   
         if(!userDB){
             throw "USUARIO NO EXISTE";
         }
