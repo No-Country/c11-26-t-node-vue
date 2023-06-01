@@ -14,6 +14,9 @@ function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [alias, setAlias] = useState("");
 
+
+  //const lastUserAlias = localStorage.getItem("lastUserAlias");
+
   useEffect(() => {
     const storedAlias = localStorage.getItem("alias");
     if (storedAlias) {
