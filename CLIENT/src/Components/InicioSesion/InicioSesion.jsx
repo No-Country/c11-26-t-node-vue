@@ -1,6 +1,6 @@
 import './InicioSesion.css';
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
 
 const InicioSesion = () => {
@@ -12,13 +12,35 @@ const InicioSesion = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(handleSubmit);
+     fetch(`https://nocountry.clopezpro.com/auth/login?user=${email}&pass=${password}`).then((res) => {
+      if (res.status === 200) {
+        return res.json();
+      } else {
+        console.log("Login incorrecto");
+      }
+    }).then(res=>{
+      
+      switch(res.result){
+        case 1:
+          //login is ok
+          localStorage.setItem("token", res.token);
+          setEmail("");
+          setPassword("");
+          setError("");
+          Navigate("/home");
+          break;
+        default:
+          throw res.message;
+      }
+    }).catch(err=>{
+       setError(err);
+       alert(err);
+    })
 
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-    setEmail("");
-    setPassword("");
-    setError("");
+
+    /* localStorage.setItem("email", email);
+    localStorage.setItem("password", password); */
+    
   };
 
   const togglePasswordVisibility = () => {
