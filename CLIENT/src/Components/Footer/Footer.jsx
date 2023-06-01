@@ -13,44 +13,51 @@ const Footer = () => {
       <div className="contenedor">
         <div className="contenedorfoot">
           <h3 className="titleFooter">Musica</h3>
-          <Link className="linkFooter" to={"/"}>
-            <p className="links">Inicio</p>
+          <Link className="linkFooter" to={"/home"}>
+            <p className="p">Inicio</p>
           </Link>
           <Link className="linkFooter" to={"/"}>
-            <p className="links">Catalogó</p>
+            <p className="p">Catalogó</p>
           </Link>
           <Link className="linkFooter" to={"/"}>
-            <p className="links">Artistas</p>
+            <p className="p">Artistas</p>
           </Link>
         </div>
         <div className="contenedorfoot">
           <h3 className="titleFooter">Enlaces útiles</h3>
           <Link className="linkFooter" to={"/"}>
-            <p className="links">Ayuda</p>
+            <p className="p">Ayuda</p>
           </Link>
           <Link className="linkFooter" to={"/"}>
-            <p className="links">Preguntas frecuentes</p>
+            <p className="p">Preguntas frecuentes</p>
           </Link>
-          <Link className="linkFooter" to={"/"}>
-            <p className="links">App móvil gratis</p>
+          <Link className="linkFooter" to={"https://chrome.google.com/webstore/category/extensions?hl=es"} target="_blank">
+            <p className="p">App móvil gratis</p>
           </Link>
         </div>
         <div className="contenedorfoot">
           <h3 className="titleFooter">Equipo</h3>
           <Link className="linkFooter" to={"/"}>
-            <p className="links">Acerca de</p>
+            <p className="p">Acerca de</p>
           </Link>
         </div>
         <div className="contenedorfoot">
           <h3 className="titleFooter">Contacto</h3>
+          <Link to={'https://www.instagram.com/'} target="_blank">
           <AiOutlineInstagram className="redes" />
+          </Link>
+          <Link to={'https://twitter.com/'} target="_blank">
           <AiOutlineTwitter className="redes" />
+          </Link>
+          <Link to={'https://www.facebook.com/'} target="_blank">
           <img className="redes" src={"../../assets/facebook.svg"} alt="" />
+          </Link>
         </div>
       </div>
       <hr />
       <p className="copy">
-        Copyright <AiOutlineCopyrightCircle />
+        {" "}
+        Copyrigth <AiOutlineCopyrightCircle />
         <span className="parrafoMagenta">c11-26-t-node-vue</span>
       </p>
     </footer>

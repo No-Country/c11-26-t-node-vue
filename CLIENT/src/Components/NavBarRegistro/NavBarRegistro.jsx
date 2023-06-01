@@ -19,7 +19,7 @@ const NavBarRegistro = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"*"}>
+              <NavLink to={"/iniciarsesion"}>
                 <button className="btnInicio">Inicio de sesión</button>
               </NavLink>
             </li>

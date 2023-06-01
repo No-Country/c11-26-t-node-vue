@@ -1,95 +1,95 @@
-  .cardProducto {
+.cardProducto {
    
-    text-decoration: none;
-  }
-  
-  
-  .btninfo {
-    border: none;
-    color: none;
-    
-  }
-  
-  .cardProducto {
-    border-radius: 12px;
-    background:#FFD829;
-    height: 280PX;
-    width: 181px;
-    margin-bottom: 32px;
-    transition: all 0.25s;
-    
-  }
-
-  .cardProducto:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-
-.contenedorCardArtista {
-  display: flex;
-  flex-direction: column;
+  text-decoration: none;
 }
 
 
- .artista {
-  display: flex;
-  flex-direction: column;
-  color: #1D1B20;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: left;
-  margin-left: 14px;
-  margin-top: 20PX;
+.btninfo {
+  border: none;
+  color: none;
   
-  
-  
-  
+}
 
- }
+.cardProducto {
+  border-radius: 12px;
+  background:#FFD829;
+  height: 280PX;
+  width: 181px;
+  margin-bottom: 32px;
+  transition: all 0.25s;
+  
+}
 
- .album {
-  
-  color: #49454F;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  text-align: left;
-  margin-left: 14px;
-  
-  
- }
+.cardProducto:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.contenedorCardArtista {
+display: flex;
+flex-direction: column;
+}
+
+
+.artista {
+display: flex;
+flex-direction: column;
+color: #1D1B20;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: left;
+margin-left: 14px;
+margin-top: 20PX;
+
+
+
+
+
+}
+
+.album {
+
+color: #49454F;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+text-align: left;
+margin-left: 14px;
+
+
+}
 
 .imgCard {
-    width: 181px;
-    height: 184px;
-    border-radius: 12px 12px 0 0;
-    border: none;
-    
-    
+  width: 181px;
+  height: 184px;
+  border-radius: 12px 12px 0 0;
+  border: none;
+  
+  
 }
 
 .btnAgregar {
-  border: none;
-  border-radius: 25px;
-  font-size: 15px;
+border: none;
+border-radius: 25px;
+font-size: 15px;
 }
 
 .btnAgregar:hover {
-  transform: translateY(1px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+transform: translateY(1px);
+box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
 }
 
 .btnInfo {
-  text-decoration: none;
-  color: #020202;
-  border: solid white;
-  width: 90px;
-  text-align: center;
-  border-radius: 30px;
-  background: #fafafa;
+text-decoration: none;
+color: #020202;
+border: solid white;
+width: 90px;
+text-align: center;
+border-radius: 30px;
+background: #fafafa;
 }
