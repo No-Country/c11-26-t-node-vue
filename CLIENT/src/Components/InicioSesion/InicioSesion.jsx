@@ -1,17 +1,17 @@
 import './InicioSesion.css';
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
 
 const InicioSesion = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-
      fetch(`https://nocountry.clopezpro.com/auth/login?user=${email}&pass=${password}`).then((res) => {
       if (res.status === 200) {
         return res.json();
@@ -27,7 +27,7 @@ const InicioSesion = () => {
           setEmail("");
           setPassword("");
           setError("");
-          Navigate("/home");
+          navigate('/home', { replace: true });
           break;
         default:
           throw res.message;
@@ -36,11 +36,6 @@ const InicioSesion = () => {
        setError(err);
        alert(err);
     })
-
-
-    /* localStorage.setItem("email", email);
-    localStorage.setItem("password", password); */
-    
   };
 
   const togglePasswordVisibility = () => {
