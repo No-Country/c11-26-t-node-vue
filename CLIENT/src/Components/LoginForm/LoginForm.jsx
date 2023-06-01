@@ -23,41 +23,41 @@ function LoginForm() {
       );
       return;
     }
-
-    try {
-      const response = await fetch("https://nocountry.clopezpro.com/auth/register", {
+     fetch("https://nocountry.clopezpro.com/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          alias: alias,
+          name: alias,
           email: email,
           password: password
         })
-      });
+      }).then((res) => {
+          if (res.status === 200) {
+            return res.json();
+          } else {
+            console.log("Login incorrecto");
+          }
+      }).then(res=>{
+      
+      switch(res.result){
+        case 1:
+          //login is ok
+            setAlias("");
+          setEmail("");
+          setPassword("");
+          setConfirmPassword("");
 
-      if (response.ok) {
-        // Registro exitoso
-        setAlias("");
-        setEmail("");
-        setPassword("");
-        setConfirmPassword("");
-
-        localStorage.setItem("lastUserAlias", alias);
-
-        setError( <p className="exitoUser">Usuario registrado exitosamente, puede iniciar sesión</p> );
-      } else {
-        // Manejar errores de la solicitud
-        setError( <p className="exitoUser">Error al registrar el usuario</p>);
+          setError( <p className="exitoUser">Usuario registrado exitosamente, puede iniciar sesión</p> );
+          break;
+        default:
+          throw res.message;
       }
-    } catch (error) {
-      // Manejar errores de la solicitud
-      setError(<p className="exitoUser">Error al registrar el usuario</p>);
-    }
-    console.log("Alias:", alias);
-    console.log("Email:", email);
-    console.log("Password:", password);
+    }).catch(err=>{
+         setError(<p className="exitoUser">ssss</p>);
+       alert(err);
+    })
   };
 
   const togglePasswordVisibility = () => {
