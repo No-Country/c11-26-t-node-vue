@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Item.css';
 import '../../App.less';
 
-const Item = ({ _id, title, precio, imagen, idCat, color }) => {
+const Item = ({ _id, title, cover, name}) => {
   const agregarProd = () => {
     console.log(_id);
   };
@@ -20,9 +20,9 @@ const Item = ({ _id, title, precio, imagen, idCat, color }) => {
   return (
     <Link to={`/item/${_id}`} className="cardProducto" style={{ backgroundColor }}>
       <div className="contenedorCardArtista">
-        <img src={imagen} alt={title} className="imgCard" />
+        <img src={ cover  } alt={title} className="imgCard" />
         <div>
-          <span className="artista">{_id}</span>
+          <span className="artista">{name}</span>
           <span className="album">{title}</span>
         </div>
       </div>

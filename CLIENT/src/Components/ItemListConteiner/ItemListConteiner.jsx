@@ -14,8 +14,8 @@ const ItemListConteiner = () => {
         switch(data.result){
           case 1:
                if (Array.isArray(data.data)) {
-                  setProductos(data.data);
-                  console.log(data.data); // Verificar los datos en la consola
+                   setProductos(data.data);
+                  //console.log(data.data); // Verificar los datos en la consola
                 } else {
                   alert("La respuesta de la API no es un array válido");
                 }
@@ -32,7 +32,7 @@ const ItemListConteiner = () => {
       {
         productos.map(producto => {
           return (
-            <div  key={producto.title} >
+            <div  key={producto._id} >
               <h4>{producto.title}</h4>
               <h4>{producto.artist.name}</h4>
               

@@ -7,7 +7,8 @@ import Corazon from "../Corazon/Corazon";
 import AudioPlayer from "../AudioPlayer/AudioPlayer";
 import playIcon from "../../../assets/Iconos-Artistas-Home/play.svg";
 
-const ItemDetail = ({ id, titulo, precio, imagen, stock }) => {
+
+const ItemDetail = ({ _id, title, precio, cover, stock }) => {
   const colores = ["#FFD829", "#FE6927", "#FF80D9", "#4EAFFE", "#FE6927"];
   const [backgroundColor, setBackgroundColor] = useState("");
   const [agregarCantidad, setAgregarCantidad] = useState(0);
@@ -57,7 +58,7 @@ const ItemDetail = ({ id, titulo, precio, imagen, stock }) => {
   ];
   return (
     <div className="contenedorItem">
-      <img src={imagen} alt={titulo} className="imgItemDetail" />
+      <img src={cover} alt={title} className="imgItemDetail" />
       <div className="contenedorDetail">
         <div className="navDetail">
           <ul className="ulDetail">
@@ -70,9 +71,9 @@ const ItemDetail = ({ id, titulo, precio, imagen, stock }) => {
           </ul>
           <Corazon id={id} />
         </div>
-        <h2 className="artistaDetail"> {id} </h2>
+        <h2 className="artistaDetail"> {_id} </h2>
         <div className="contenedorPrecioDetail">
-          <h3 className="tituloDetail"> {titulo} </h3>
+          <h3 className="tituloDetail"> {title} </h3>
           <h4 className="precioDetail"> US $ {precio} </h4>
         </div>
         <div className="btnDetail">
@@ -99,7 +100,7 @@ const ItemDetail = ({ id, titulo, precio, imagen, stock }) => {
                     className="play"
                     src={playIcon}
                     alt="Play"
-                    onClick={() => setSelectedAudio(cancion.id)}
+                    onClick={() => setSelectedAudio(cancion._id)}
                   />
                   {cancion}
                 </li>
