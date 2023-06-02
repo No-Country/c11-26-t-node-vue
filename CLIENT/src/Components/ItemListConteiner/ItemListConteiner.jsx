@@ -29,18 +29,6 @@ const ItemListConteiner = () => {
 
   return (
     <div>
-      {
-        productos.map(producto => {
-          return (
-            <div  key={producto._id} >
-              <h4>{producto.title}</h4>
-              <h4>{producto.artist.name}</h4>
-              
-              
-            </div>
-          )
-        })
-      }
       <ItemList productos={productos} />
     </div>
   );
