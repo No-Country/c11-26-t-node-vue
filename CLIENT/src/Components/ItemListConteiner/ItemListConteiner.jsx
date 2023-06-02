@@ -11,11 +11,17 @@ const ItemListConteiner = () => {
     fetch("https://nocountry.clopezpro.com/music/album")
       .then(resp => resp.json())
       .then(data => {
-        if (Array.isArray(data)) {
-          setProductos(data);
-          console.log(data); // Verificar los datos en la consola
-        } else {
-          console.log("La respuesta de la API no es un array válido");
+        switch(data.result){
+          case 1:
+               if (Array.isArray(data.data)) {
+                  setProductos(data.data);
+                  console.log(data.data); // Verificar los datos en la consola
+                } else {
+                  alert("La respuesta de la API no es un array válido");
+                }
+            break;
+          default:
+            throw data.message;
         }
       })
       .catch(error => console.log(error));
@@ -26,7 +32,12 @@ const ItemListConteiner = () => {
       {
         productos.map(producto => {
           return (
-            <h4 key={producto.title}>{producto._id}</h4>
+            <div  key={producto.title} >
+              <h4>{producto.title}</h4>
+              <h4>{producto.artist.name}</h4>
+              
+              
+            </div>
           )
         })
       }
