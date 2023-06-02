@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Item.css';
 import '../../App.less';
 
-const Item = ({ _id, title, cover, name}) => {
+const Item = ({ _id, title, cover, artist}) => {
   const agregarProd = () => {
     console.log(_id);
   };
@@ -22,7 +22,7 @@ const Item = ({ _id, title, cover, name}) => {
       <div className="contenedorCardArtista">
         <img src={ cover  } alt={title} className="imgCard" />
         <div>
-          <span className="artista">{name}</span>
+          <span className="artista">{artist.name}</span>
           <span className="album">{title}</span>
         </div>
       </div>
