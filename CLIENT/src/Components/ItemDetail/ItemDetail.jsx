@@ -1,30 +1,38 @@
-import Contador from "../Contador/Contador";
-import "./ItemDetail.css";
-import "../../App.less";
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Corazon from "../Corazon/Corazon";
-import AudioPlayer from "../AudioPlayer/AudioPlayer";
-import playIcon from "../../../assets/Iconos-Artistas-Home/play.svg";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './ItemDetail.css';
+import '../../App.less';
+import Corazon from '../Corazon/Corazon';
+import AudioPlayer from '../AudioPlayer/AudioPlayer';
+import playIcon from '../../../assets/Iconos-Artistas-Home/play.svg';
+import { getItem } from '../../asyncmock';
 
-
-const ItemDetail = ({ _id, title, precio, cover, stock }) => {
-  const colores = ["#FFD829", "#FE6927", "#FF80D9", "#4EAFFE", "#FE6927"];
-  const [backgroundColor, setBackgroundColor] = useState("");
+const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
+  const colores = ['#FFD829', '#FE6927', '#FF80D9', '#4EAFFE', '#FE6927'];
+  const [backgroundColor, setBackgroundColor] = useState('');
   const [agregarCantidad, setAgregarCantidad] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
   const [selectedAudio, setSelectedAudio] = useState(null);
+  const [itemData, setItemData] = useState(null);
 
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    console.log("Productos agregados " + cantidad);
+    console.log('Productos agregados ' + cantidad);
   };
 
   useEffect(() => {
     const indiceAleatorio = Math.floor(Math.random() * colores.length);
     const colorAleatorio = colores[indiceAleatorio];
     setBackgroundColor(colorAleatorio);
-  }, []);
+
+    getItem(_id)
+      .then((data) => {
+        setItemData(data);
+      })
+      .catch((error) => {
+        console.error(`Error al obtener el producto con ID ${_id}`, error);
+      });
+  }, [_id]);
 
   const handleClickCanciones = () => {
     setIsClicked(true);
@@ -34,31 +42,11 @@ const ItemDetail = ({ _id, title, precio, cover, stock }) => {
     setIsClicked(false);
   };
 
-  const canciones = [
-    "Canción 1",
-    "Canción 2",
-    "Canción 3",
-    "Canción 4",
-    "Canción 5",
-  ];
+  const canciones = ['Canción 1', 'Canción 2', 'Canción 3', 'Canción 4', 'Canción 5'];
 
-  const audioFiles = [
-    {
-      id: 1,
-      url: "https://cdns-preview-b.dzcdn.net/stream/c-b2fba8fa64bfb40b6c11bacef08f79d5-9.mp3",
-    },
-    {
-      id: 2,
-      url: "https://cdns-preview-b.dzcdn.net/stream/c-b2fba8fa64bfb40b6c11bacef08f79d5-9.mp3",
-    },
-    {
-      id: 3,
-      url: "https://cdns-preview-b.dzcdn.net/stream/c-b2fba8fa64bfb40b6c11bacef08f79d5-9.mp3",
-    },
-  ];
   return (
     <div className="contenedorItem">
-      <img src={cover} alt={title} className="imgItemDetail" />
+      <img src={cover_xl} alt={title} className="imgItemDetail" />
       <div className="contenedorDetail">
         <div className="navDetail">
           <ul className="ulDetail">
@@ -69,24 +57,18 @@ const ItemDetail = ({ _id, title, precio, cover, stock }) => {
               CATALOGO/
             </Link>
           </ul>
-          <Corazon id={id} />
+          <Corazon _id={_id} />
         </div>
-        <h2 className="artistaDetail"> {_id} </h2>
+        <h2 className="artistaDetail">{artist}</h2>
         <div className="contenedorPrecioDetail">
-          <h3 className="tituloDetail"> {title} </h3>
-          <h4 className="precioDetail"> US $ {precio} </h4>
+          <h3 className="tituloDetail">{title}</h3>
+          <h4 className="precioDetail">US $ {precio}</h4>
         </div>
         <div className="btnDetail">
-          <button
-            className={`btnCanciones ${isClicked ? "clicked" : ""}`}
-            onClick={handleClickCanciones}
-          >
+          <button className={`btnCanciones ${isClicked ? 'clicked' : ''}`} onClick={handleClickCanciones}>
             Canciones
           </button>
-          <button
-            className={`btnResumen ${isClicked ? "clicked" : ""}`}
-            onClick={handleClickResumen}
-          >
+          <button className={`btnResumen ${isClicked ? 'clicked' : ''}`} onClick={handleClickResumen}>
             Resumen
           </button>
         </div>
@@ -104,19 +86,15 @@ const ItemDetail = ({ _id, title, precio, cover, stock }) => {
                   />
                   {cancion}
                 </li>
-                {index !== canciones.length - 1 && (
-                  <hr className="lineaSeparacion" />
-                )}
+                {index !== canciones.length - 1 && <hr className="lineaSeparacion" />}
               </React.Fragment>
             ))}
           </ul>
         ) : (
           <p className="parrafoItem">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
-            quia eligendi enim quam sint. Suscipit ipsa laboriosam iusto
-            doloribus recusandae.loren Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit. Aliquam quia eligendi enim quam sint. Suscipit
-            ipsa laboriosam iusto doloribus recusandae.loren
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quia eligendi enim quam sint. Suscipit
+            ipsa laboriosam iusto doloribus recusandae.loren Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Aliquam quia eligendi enim quam sint. Suscipit ipsa laboriosam iusto doloribus recusandae.loren
           </p>
         )}
         <div className="btnConteCompra">
@@ -125,12 +103,9 @@ const ItemDetail = ({ _id, title, precio, cover, stock }) => {
         </div>
       </div>
 
-      {selectedAudio !== null && (
-        <AudioPlayer audioFiles={audioFiles} selectedAudio={selectedAudio} />
-      )}
+      {selectedAudio !== null && <AudioPlayer audioFiles={itemData.audioFiles} selectedAudio={selectedAudio} />}
     </div>
   );
 };
 
 export default ItemDetail;
-

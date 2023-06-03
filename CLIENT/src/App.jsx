@@ -9,26 +9,25 @@ import ItemDetailConteiner from "./Components/ItemDetailConteiner/ItemDetailCont
 import Home from "./Components/Home/Home";
 import InicioSesion from "./Components/InicioSesion/InicioSesion";
 import Cart from "./Components/Cart/Cart";
-
-
+import CatalogoCompleto from "./Components/CatalogoCompleto/CatalogoCompleto";
 
 function App() {
   return (
     <BrowserRouter>
-    
-     <ScrollToTop />
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<NavBarRegistro />} />
+        <Route path="*" element={<NavBarRegistro />} />
         <Route path="/registro" element={<LoginForm />} />
         <Route path="/categoria" element={<ItemListConteiner />} />
         <Route path="/:idCategoria" element={<ItemListConteiner />} />
         <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/iniciarsesion" element={ <InicioSesion /> }/>
+        <Route path="/iniciarsesion" element={<InicioSesion />} />
+        <Route path="album" element={ <CatalogoCompleto /> } />
         <Route path="/cart" element={<Cart />} />
+
       </Routes>
       <Footer />
-      
     </BrowserRouter>
   );
 }

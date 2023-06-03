@@ -60,6 +60,8 @@ font-weight: 400;
 font-size: 12px;
 text-align: left;
 margin-left: 14px;
+display: flex;
+flex-wrap: wrap;
 
 
 }

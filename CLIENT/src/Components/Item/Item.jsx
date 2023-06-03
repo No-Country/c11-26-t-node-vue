@@ -20,7 +20,7 @@ const Item = ({ _id, title, cover, artist}) => {
   return (
     <Link to={`/item/${_id}`} className="cardProducto" style={{ backgroundColor }}>
       <div className="contenedorCardArtista">
-        <img src={ cover  } alt={title} className="imgCard" />
+        <img src={ cover } alt={title} className="imgCard" />
         <div>
           <span className="artista">{artist.name}</span>
           <span className="album">{title}</span>

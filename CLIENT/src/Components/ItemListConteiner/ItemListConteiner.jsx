@@ -1,21 +1,25 @@
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../../asyncmock";
 
 const ItemListConteiner = () => {
   const [productos, setProductos] = useState([]);
 
   const { idCategoria } = useParams();
 
+  
+
   useEffect(() => {
-    fetch("https://nocountry.clopezpro.com/music/album")
+    
+    fetch(db)
       .then(resp => resp.json())
       .then(data => {
         switch(data.result){
           case 1:
                if (Array.isArray(data.data)) {
                    setProductos(data.data);
-                  //console.log(data.data); // Verificar los datos en la consola
+                  console.log(data.data); 
                 } else {
                   alert("La respuesta de la API no es un array válido");
                 }

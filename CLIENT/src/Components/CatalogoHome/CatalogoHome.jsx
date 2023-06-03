@@ -6,6 +6,7 @@ import ItemDetailConteiner from "../ItemDetailConteiner/ItemDetailConteines";
 import Artistas from "../Artistas/Artistas";
 
 
+
 const CatalogoHome = () => {
   return (
     <>
@@ -101,7 +102,7 @@ const CatalogoHome = () => {
             <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
             <Route path="/home/*" element={<h2>Sitio en Construcción</h2>} />
           </Routes>
-          <button className="btnVerMasCata">Ver más</button>
+          <NavLink to="/album" className="btnVerMasCata">Ver más</NavLink>
         </div>
         <Artistas />
       </section>

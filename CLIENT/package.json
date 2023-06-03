@@ -12,6 +12,7 @@
   "dependencies": {
     "@auth0/auth0-react": "^2.1.0",
     "antd": "^5.5.0",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "framer-motion": "^10.12.12",
     "install": "^0.13.0",

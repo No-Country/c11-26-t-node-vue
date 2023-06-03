@@ -1,6 +1,7 @@
 import "../../App.less";
 
 
+
 const FrontPage = () => {
   return (
     <>
@@ -52,6 +53,7 @@ const FrontPage = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };
