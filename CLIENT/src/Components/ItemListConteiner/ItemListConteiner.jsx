@@ -11,15 +11,15 @@ const ItemListConteiner = () => {
   
 
   useEffect(() => {
-    
-    fetch(db)
-      .then(resp => resp.json())
+    console.log(db)
+    fetch(db+"/music/album")
+      .then(resp =>  resp.json())
       .then(data => {
+  
         switch(data.result){
           case 1:
                if (Array.isArray(data.data)) {
                    setProductos(data.data);
-                  console.log(data.data); 
                 } else {
                   alert("La respuesta de la API no es un array válido");
                 }

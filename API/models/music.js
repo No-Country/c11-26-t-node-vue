@@ -18,7 +18,7 @@ const artistScheme = new Schema(
 const musicScheme = new Schema({
   title: { type: String, trim: true },
   title_short: { type: String, trim: true },
-  id:{type:Number},
+  id: { type: Number },
   explicit_lyrics: { type: Boolean, default: false },
   preview: { type: String, trim: true },
   duration: { type: Number },
@@ -26,10 +26,10 @@ const musicScheme = new Schema({
     _id: { type: Schema.ObjectId, ref: 'artists' },
     name: { type: String, trim: true },
   },
-  album:{
-    _id: { type: Schema.ObjectId, ref: 'albums' },
+  album: {
+    _id: { type: Schema.ObjectId, ref: 'albums', required:true },
     title: { type: String, trim: true },
-  }
+  },
 });
 const albumScheme = new Schema({
   title: { type: String, trim: true },

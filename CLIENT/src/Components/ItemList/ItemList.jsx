@@ -4,6 +4,7 @@ import "./ItemList.css";
 import "../../App.less";
 
 const ItemList = ({ productos }) => {
+
   // Mezclar el arreglo de productos de forma aleatoria
   const productosAleatorios = productos.sort(() => Math.random() - 0.5);
   // Obtener solo los primeros 12 productos aleatorios

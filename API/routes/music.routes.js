@@ -190,14 +190,16 @@ router.get('/album', async (req, res) => {
 router.get('/album/:id', async (req, res) => {
   try {
     const id=req.params.id;
-     const albumDBID = await M_album.findOne({ artist: id });
-     const data = albumDBID?albumDBID.map(a => a):null;
-     if(!data){
-       throw "NO EXISTEN DATOS DEL ID PROPORCIONADO";
+     const albumDBID = await M_album.findOne({ _id: id });
+     
+     if (!albumDBID) {
+       throw 'NO EXISTEN DATOS DEL ID PROPORCIONADO';
      }
+
+     const music = await M_music.find({ 'album._id': id }); 
     res.json({
       result: 1,
-      data,
+      data: { ...albumDBID.toObject() , music},
     });
   } catch (error) {
     let message;

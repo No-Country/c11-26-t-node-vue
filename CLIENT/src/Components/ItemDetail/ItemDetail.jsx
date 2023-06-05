@@ -46,7 +46,7 @@ const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
 
   return (
     <div className="contenedorItem">
-      <img src={cover_xl} alt={title} className="imgItemDetail" />
+      <img src={itemData?.cover_xl} alt={itemData?.title} className="imgItemDetail" />
       <div className="contenedorDetail">
         <div className="navDetail">
           <ul className="ulDetail">
@@ -59,9 +59,9 @@ const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
           </ul>
           <Corazon _id={_id} />
         </div>
-        <h2 className="artistaDetail">{artist}</h2>
+        <h2 className="artistaDetail">{itemData?.artist.name}</h2>
         <div className="contenedorPrecioDetail">
-          <h3 className="tituloDetail">{title}</h3>
+          <h3 className="tituloDetail">{itemData?.title}</h3>
           <h4 className="precioDetail">US $ {precio}</h4>
         </div>
         <div className="btnDetail">
@@ -75,7 +75,7 @@ const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
 
         {isClicked ? (
           <ul className="listaCanciones">
-            {canciones.map((cancion, index) => (
+            {itemData?.music?.map((cancion, index) => (
               <React.Fragment key={index}>
                 <li>
                   <img
@@ -84,12 +84,18 @@ const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
                     alt="Play"
                     onClick={() => setSelectedAudio(cancion._id)}
                   />
-                  {cancion}
+                  {cancion.title}  {cancion.duration}Min
+                  <div>
+                      <audio src={cancion.preview} controls="controls"  preload="none"></audio>
+                  </div>
+              
                 </li>
                 {index !== canciones.length - 1 && <hr className="lineaSeparacion" />}
               </React.Fragment>
             ))}
           </ul>
+           
+
         ) : (
           <p className="parrafoItem">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quia eligendi enim quam sint. Suscipit
