@@ -111,6 +111,8 @@ const creatDefaultArtist = async () => {
             } else {
               insAlbum = albumDB;
             }
+          /*   console.log(insAlbum._id);
+            return; */
 
             let insMusic = new M_music();
 
@@ -125,10 +127,10 @@ const creatDefaultArtist = async () => {
               name: insArtist.name,
             };
 
-            insMusic.album = {
-              id_: insAlbum._id,
-              title: insAlbum.title,
-            };
+            insMusic.album._id=insAlbum._id;
+            insMusic.album.title=insAlbum.title;
+
+              
             const musicDB = await M_music.findOne({ id: insMusic.id });
             if (!musicDB) {
               insMusic = await insMusic.save();
