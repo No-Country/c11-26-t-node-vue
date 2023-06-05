@@ -187,5 +187,27 @@ router.get('/album', async (req, res) => {
     });
   }
 });
+router.get('/album/:id', async (req, res) => {
+  try {
+    const id=req.params.id;
+     const albumDBID = await M_album.findOne({ artist: id });
+     const data = albumDBID?albumDBID.map(a => a):null;
+     if(!data){
+       throw "NO EXISTEN DATOS DEL ID PROPORCIONADO";
+     }
+    res.json({
+      result: 1,
+      data,
+    });
+  } catch (error) {
+    let message;
+    if (error instanceof Error) message = error.message;
+    else message = String(error);
+    res.json({
+      result: 0,
+      message,
+    });
+  }
+});
 
 module.exports = router;
