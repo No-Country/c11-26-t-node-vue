@@ -1,0 +1,41 @@
+.cata4 {
+  background: linear-gradient(180deg, #ffd829  10%, #000000 100%);
+    
+  }
+  
+  
+  .conteBntAl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .btnAl4 {
+    width: 32px;
+    height: 8px;
+    left: 648px;
+    top: 892px;
+    border: none;
+    background: #ffd829 ;
+    border-radius: 50px;
+    margin: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btnAl {
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: #979797;
+    margin: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

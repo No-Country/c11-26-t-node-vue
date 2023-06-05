@@ -1,56 +1,172 @@
-.conte {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-margin-left: 66px;
+.cata1 {
+  background: linear-gradient(180deg, #7d2bd5  20%, #000000 100%);
+}
 
+.conte {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 66px;
 }
 
 .navDetail3 {
   margin-bottom: 120px;
-
 }
 
 .liDetail3 {
-    
-    cursor: pointer;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19.5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #eaebed;
-    margin-bottom: 120%;
-    
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eaebed;
+  margin-bottom: 120%;
+}
+
+.trayectoriaDeOnda1 {
+  width: 30.67px;
+  height: 32px;
+}
+
+.h2Catalogo1 {
+  color: #EAEBED;
+  font-family: Montserrat, sans-serif;
+  width: 182px;
+  height: 29px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 90%;
+  text-transform: uppercase;
+  margin-left: 30px;
+  margin-right: 30%;
+}
+
+.right-navbar {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.searchbar {
+  display: flex;
+  width: 328px;
+  height: 40px;
+  border: 2px solid #eaebed;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.btnLupa {
+  border: none;
+  background: none;
+  color: #eaebed;
+  font-size: 23px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.inputSerch {
+  margin-left: 20px;
+  width: 280px;
+  height: 40px;
+  border: none;
+  background: none;
+  border-radius: 28px;
+  outline: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #eaebed;
+}
+
+
+.conteBntAl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.btnAl1 {
+  width: 32px;
+  height: 8px;
+  left: 648px;
+  top: 892px;
+  border: none;
+  background: #7d2bd5;
+  border-radius: 50px;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnAl {
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  background: #979797;
+  margin: 2px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .conte {
+    height: 300px;
+    width: 200;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+  }
    
-    
-  }
-
   
-  
+}
 
-  .trayectoriaDeOnda1 {
-    width: 30.67px;
-    height: 32px;
-    
-   
-    
+@media only screen and (max-width: 768px) {
+  .searchbar {
+    display: none;
   }
 
-  .h2Catalogo1 {
-    color: #eaebed;
-    font-family: Montserrat, sans-serif;
-    width: 182px;
-    height: 29px;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 90%;
-    text-transform: uppercase;
-    margin-left: 30px;
-    margin-right: ;
-    
+  .conte {
+    display: flex;
+    flex-direction: row;
   }
+
+  .navDetail3 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+  }
+
+  .trayectoriaDeOnda1{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .h2Catalogo1{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: 0;
+
+  }
+}

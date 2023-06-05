@@ -29,8 +29,8 @@
 }
 
 .logoLogin {
-  height: 96.58;
-  width: 100px;
+  height: auto;
+  width: auto;
 
   display: flex;
 }
@@ -43,14 +43,8 @@
   font-weight: 800;
   font-size: 32px;
   line-height: 39px;
-  /* identical to box height */
-
   text-align: center;
-
-  /* Color 1 */
-
   color: #303030;
-
   display: flex;
   flex-direction: row;
 }
@@ -180,7 +174,21 @@
   
 }
 
-.bienvenida {
+.bienvenida1 {
+  width: 661px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  text-align: center;
+  color: #eaebed;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.bienvenida2 {
   width: 661px;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
@@ -205,8 +213,8 @@
 }
 
 /* Div contenedor de todo el componente  */
-.conte{
-   
+.conteForm  {
+   height: 960px;
    display: flex;
 
 }
@@ -216,4 +224,92 @@
   font-weight: 200;
   font-size: 17px;
   color: #49454f;
+}
+@media screen and (max-width: 768px) {
+  .formLogin {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+ 
+  .creaLogin {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .labelLogin {
+    margin-top: 15px;
+  }
+
+  .input,
+  .inputpassword {
+    width:50%;
+   
+    margin-bottom: 10px;
+  }
+
+  .btnRegist {
+    margin-top: 20px;
+  }
+
+  .h4login {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .spanLogin {
+    font-size: 14px;
+  }
+
+  .bienvenida1,
+  .bienvenida2,
+  .explora {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .formLogin {
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+ 
+
+  .creaLogin {
+    
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .labelLogin {
+    margin-top: 10px;
+    width: 100px;
+  }
+
+  .input {
+    width: 0px;
+    margin-bottom: 10px;
+  }
+
+  .btnRegist {
+    margin-top: 15px;
+  }
+
+  .h4login {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .spanLogin {
+    font-size: 12px;
+  }
+
+  .bienvenida1,
+  .bienvenida2,
+  .explora {
+    display: none;
+  }
 }

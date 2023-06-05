@@ -1,8 +1,27 @@
+import React, { useEffect, useState } from "react";
+import Carrusel from "../Carrusel/Carrusel";
 import "./Artistas.css";
 
 const Artistas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
+      {isMobile ? (
+        <Carrusel />
+      ) : (
+        <>
       <div className="artistasContainerHome">
         <img
           className="artistasImgHome"
@@ -78,7 +97,11 @@ const Artistas = () => {
       </div>
         <button className="btnVerMas">Ver más</button>
     </>
+      )}
+      
+    </>
   );
 };
 
 export default Artistas;
+

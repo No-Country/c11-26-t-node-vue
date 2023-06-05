@@ -43,7 +43,7 @@ const InicioSesion = () => {
   };
 
   return (
-    <div className="conte">
+    <section className="conteForm">
       <img
         className="loginConteiner"
         src="../../../assets/imgFondoLogin.jpeg"
@@ -109,7 +109,7 @@ const InicioSesion = () => {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

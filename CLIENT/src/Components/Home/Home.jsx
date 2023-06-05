@@ -1,19 +1,19 @@
-import logo from "../../../assets/logo.svg";
 import kid_music from "../../../assets/home-icons/kid-listens-music.svg";
 import { RxMagnifyingGlass } from "react-icons/rx";
 import { RxAvatar } from "react-icons/rx";
 import "./Home.less";
 import CatalogoHome from "../CatalogoHome/CatalogoHome";
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from "react";
 import CartWidget from "../CartWidget/CartWidget";
+import { BsMusicNoteList } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 
-function Home() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [alias, setAlias] = useState("");
 
+function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [alias, setAlias] = useState("");
+  const [openHome, setOpenHome] = useState(false);
 
   //const lastUserAlias = localStorage.getItem("lastUserAlias");
 
@@ -25,39 +25,52 @@ function Home() {
   }, []);
 
   const handleSearch = () => {
-    
-    console.log('Realizando búsqueda con el término:', searchTerm);
-    setSearchTerm('');
+    console.log("Realizando búsqueda con el término:", searchTerm);
+    setSearchTerm("");
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleSearch();
     }
   };
-
+  
   return (
     <>
       <div className="home">
         <section className="navbar">
           <div className="left-navbar">
-            <img src={logo} alt="Logo" />
-            <ul className="ulHome">
-              <Link className="linkHome"  to='/'> <span className="inicio">Inicio</span></Link>
-              <Link className="linkHome" ><span className="inicio">Catálogo</span></Link>
-              <Link className="linkHome" ><span className="inicio">Artistas</span></Link>
+            <Link to="/">
+              <img className="logoHome" src="/logo.png" alt="Logo" />
+            </Link>
+            <button className="open" onClick={() => setOpenHome(!openHome)}>
+              <BsMusicNoteList />
+            </button>
+            <ul className="ulHome" id={openHome ? "hidden2" : ""}>
+              <Link className="linkHome" to="/">
+                {" "}
+                <span className="inicio">Inicio</span>
+              </Link>
+              <Link className="linkHome" to='/album'>
+                <span className="inicio">Catálogo</span>
+              </Link>
+              <Link className="linkHome">
+                <span className="inicio">Artistas</span>
+              </Link>
+              <img className="chicoMusic1" src={kid_music} alt="Chico escuchando musica" />
             </ul>
           </div>
           <div className="right-navbar">
             <div className="searchbar">
-              <input 
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onKeyDown={handleKeyDown} 
-              placeholder="Buscar..."/>
-              <button className="btnLupa" onClick={handleSearch} >
-                 <RxMagnifyingGlass />
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyDown={handleKeyDown}
+                placeholder="Buscar..."
+              />
+              <button className="btnLupa" onClick={handleSearch}>
+                <RxMagnifyingGlass />
               </button>
             </div>
             <CartWidget />
@@ -76,7 +89,7 @@ function Home() {
               <span className="yellow">música</span> a lo grande!
             </h1>
           </div>
-          <img src={kid_music} alt="Chico escuchando musica" />
+          <img className="chicoMusic" src={kid_music} alt="Chico escuchando musica" />
         </section>
         <section className="iconic">
           <img
@@ -87,9 +100,7 @@ function Home() {
           <h2 className="albunesIconicos">álbunes icónicos</h2>
         </section>
 
-        
         <section className="iconic-albums">
-          
           <div className="contenedorAlbumIconico">
             <img
               className="imgAlbumIco"
@@ -145,6 +156,7 @@ function Home() {
             <p className="parrafoIconico">OK Computer | 1997</p>
           </div>
         </section>
+        
         <CatalogoHome />
       </div>
     </>
@@ -152,4 +164,3 @@ function Home() {
 }
 
 export default Home;
-

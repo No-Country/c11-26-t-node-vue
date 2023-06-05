@@ -144,3 +144,25 @@
   margin-bottom: 60px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+  .artistasContainerHome {
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    gap: 15px;
+
+  }
+  .artistasImgHome {
+    height: 40px;
+  }
+  .artistash2Home {
+    font-size: 34px;
+  }
+
+  
+  
+}
+

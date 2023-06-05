@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./LoginFrom.css";
 import { Link } from "react-router-dom";
 import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
+import ModalRegistro from "../ModalRegistro/ModalRegistro";
 
 function LoginForm() {
   const [alias, setAlias] = useState("");
@@ -11,55 +12,60 @@ function LoginForm() {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
       setError(
-        <h2 style={{ color: "red", fontFamily: "Roboto" }}>
+        <strong style={{ color: "red", fontFamily: "Roboto" }}>
           Las contraseñas no coinciden
-        </h2>
+        </strong>
       );
       return;
     }
-     fetch("https://nocountry.clopezpro.com/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name: alias,
-          email: email,
-          password: password
-        })
-      }).then((res) => {
-          if (res.status === 200) {
-            return res.json();
-          } else {
-            console.log("Login incorrecto");
-          }
-      }).then(res=>{
-      
-      switch(res.result){
-        case 1:
-          //login is ok
-          setAlias("");
-          setEmail("");
-          setPassword("");
-          setConfirmPassword("");
-          
-          //localStorage.setItem("lastUserAlias", alias);
-
-          setError( <p className="exitoUser">Usuario registrado exitosamente, puede iniciar sesión</p> );
-          break;
-        default:
-          throw res.message;
-      }
-    }).catch(err=>{
-         setError(<p className="exitoUser">Error</p>);
-       alert(err);
+    fetch("https://nocountry.clopezpro.com/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: alias,
+        email: email,
+        password: password,
+      }),
     })
+      .then((res) => {
+        if (res.status === 200) {
+          return res.json();
+        } else {
+          console.log("Login incorrecto");
+        }
+      })
+      .then((res) => {
+        switch (res.result) {
+          case 1:
+            //login is ok
+            setAlias("");
+            setEmail("");
+            setPassword("");
+            setConfirmPassword("");
+
+            setError(
+              <span className="exitoUser">
+                Usuario registrado exitosamente, puede iniciar sesión
+              </span>
+            );
+            break;
+          default:
+            throw res.message;
+        }
+      })
+      .catch((err) => {
+        setError(<span className="exitoUser">Error</span>);
+        alert(err);
+      });
   };
 
   const togglePasswordVisibility = () => {
@@ -71,7 +77,7 @@ function LoginForm() {
   };
 
   return (
-    <div className="conte">
+    <section className="conteForm">
       <img
         className="loginConteiner"
         src={"../../../assets/imgFondoLogin.jpeg"}
@@ -79,8 +85,8 @@ function LoginForm() {
       />
       <div className="degradeFondo">
         <div className="mjBienvenida">
-          <h2 className="bienvenida">Te damos la bienvenida a</h2>
-          <h2 className="bienvenida">MUSIC ESTUDIO</h2>
+          <h2 className="bienvenida1">Te damos la bienvenida a</h2>
+          <h2 className="bienvenida2">MUSIC ESTUDIO</h2>
           <h5 className="explora">
             ¡Explora nuestra colección de discos y sumérgete en el mundo de la
             música!
@@ -161,7 +167,13 @@ function LoginForm() {
               {showConfirmPassword ? <RxEyeOpen /> : <RxEyeNone />}
             </button>
           </div>
-          <button className="btnRegist" type="submit">
+          <button
+            className="btnRegist"
+            type="submit"
+            onClick={() => {
+              setOpenModal(true);
+            }}
+          >
             Registrarse
           </button>
           <div className="conteIniciar">
@@ -172,7 +184,8 @@ function LoginForm() {
           </div>
         </form>
       </div>
-    </div>
+      <ModalRegistro />
+    </section>
   );
 }
 

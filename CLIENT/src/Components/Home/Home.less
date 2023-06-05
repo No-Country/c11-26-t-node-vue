@@ -26,7 +26,7 @@
   border-radius: 0px 239px 239px 0px;
   overflow: visible;
 
-  img {
+  .chicoMusic {
     width: 400px;
     margin-right: 55px;
   }
@@ -63,36 +63,49 @@
 
 .navbar {
   color: white;
-  display: flex;
   height: 138px;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+
 
   .left-navbar {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 50px;
+    
+    
+  .logoHome {
+    width: 56px;
+    height: 56px;
+    margin-left: 100%;
+    top: 41px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+  }
+   
 
-    img {
-      width: 70px;
-      margin-left: 45px;
-    }
-
-    ul {
+    .ulHome {
       display: flex;
       align-items: center;
-      margin: 0 45px 0 0;
+      margin: 0 45px 0 150px;
       padding: 0;
       overflow: hidden;
       gap: 70px;
       text-decoration: none;
       list-style: none;
+      display: flex;
+      flex-wrap: wrap;
       .linkHome {
         list-style: none;
         text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
       }
     }
     .inicio {
-      
       color: #eaebed;
       font-family: "Roboto";
       font-style: normal;
@@ -121,15 +134,15 @@
         font-size: 23px;
         padding-right: 20px;
         cursor: pointer;
-        
       }
     }
-    
+
     .avatarHome {
       width: 100px;
       color: #eaebed;
       font-size: 33px;
       padding-right: 40px;
+      
     }
     input {
       margin-left: 20px;
@@ -183,6 +196,10 @@
   }
 }
 
+.chicoMusic1 {
+  display: none;
+}
+
 .iconic-albums {
   display: flex;
   justify-content: center;
@@ -217,8 +234,6 @@
       color: #eaebed;
       display: flex;
       flex-direction: column;
-      
-      
     }
 
     .parrafoIconico {
@@ -237,4 +252,202 @@
       padding-left: 20px;
     }
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+
+
+    .left-navbar{
+      display: flex;
+
+
+
+      .ulHome{
+        display: none;
+      }
+
+    }
+
+    .right-navbar {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: row;
+      justify-content: center;
+      align-items: center;
+      
+
+      .searchbar {
+        width: 200px;
+        input {
+          width: 130px;
+        }
+      }
+
+      .avatarHome {
+        width: 30px;
+        height: 30px;
+        padding-right: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    }
+
+
+    #hidden2 {
+      position: absolute;
+      left: 0;
+      margin-left: 0px;
+      top: 110px;
+      padding-top: 80px;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background: black
+      
+  }
+
+
+
+
+  }
+  .welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 350px;
+    margin-top: 50px;
+    background: linear-gradient(
+      268.87deg,
+      #4eaffe 0.48%,
+      #1e003e 51.63%,
+      #0a0015 99.04%
+    );
+    border-radius: 0px 239px 239px 0px;
+    overflow: visible;
+  
+    .chicoMusic {
+      display: none;
+    }
+  
+    .welcome-text {
+      margin-left: 60px;
+      color: #eaebed;
+  
+      h3 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 90%;
+  
+        span {
+          font-weight: 700;
+          font-family: "Montserrat";
+          color: #ffd829;
+          font-size: 22px;
+        }
+      }
+  
+      h1 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 35px;
+        line-height: 39px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .navbar {
+    display: flex;
+    
+    
+    
+    .left-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 110px;
+
+    .ulHome{
+      
+      gap: 20px;
+
+      .linkHome {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+      
+    }
+
+
+    .right-navbar {
+      display: none;
+      
+    }
+
+    .chicoMusic1 {
+      display: flex;
+      height: 50px;
+    }
+
+  }
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .iconic {
+  margin-left: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  gap: 3px;
+
+    .albunesIconicos {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 230px;
+      
+    }
+
+  }
+
+  .chicoMusic1 {
+    display: flex;
+    height: 50px;
+    
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .iconic-albums{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
+  
+
 }

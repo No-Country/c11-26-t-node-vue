@@ -1,13 +1,15 @@
-import ItemDetailConteiner from "../ItemDetailConteiner/ItemDetailConteines";
 import ItemListConteiner from "../ItemListConteiner/ItemListConteiner";
+import ItemDetailConteiner from "../ItemDetailConteiner/ItemDetailConteines";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
 import { RxMagnifyingGlass } from "react-icons/rx";
-import { getProductos } from "../../asyncmock";
-import "./CatalogoCompleto.css";
+import { getProductos } from "../../asyncmock"; 
+import "../../Components/CatalogoCompleto/CatalogoCompleto.css";
+import "../../App.less";
+import "./Catalogo5.css";
 
-const CatalogoCompleto = () => {
+const Catalogo5 = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [productos, setProductos] = useState([]);
   const [filteredProductos, setFilteredProductos] = useState([]);
@@ -46,8 +48,8 @@ const CatalogoCompleto = () => {
   };
 
   return (
-    <section className="cata1">
-      <div className="conte">
+    <section className="cata5">
+        <div className="conte">
         <div className="navDetail3">
           <ul className="ulDetail">
             <Link to="/home" className="liDetail3">
@@ -77,33 +79,16 @@ const CatalogoCompleto = () => {
           </button>
         </div>
       </div>
-
       <Routes>
-        <Route
-          path="/"
-          element={
-            <ItemListConteiner
-              productos={filteredProductos}
-              onItemClick={handleItemClick}
-            />
-          }
-        />
-        <Route
-          path="/:idCategoria"
-          element={
-            <ItemListConteiner
-              productos={filteredProductos}
-              onItemClick={handleItemClick}
-            />
-          }
-        />
+        <Route path="/" element={<ItemListConteiner />} />
+        <Route path="/:idCategoria" element={<ItemListConteiner />} />
         <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
         <Route path="*" element={<h2>Sitio en Construcción</h2>} />
       </Routes>
 
       <div className="conteBntAl">
         <Link to="/album">
-          <button className="btnAl1"></button>
+          <button className="btnAl"></button>
         </Link>
         <Link to="/catalogo2">
           <button className="btnAl"></button>
@@ -115,11 +100,11 @@ const CatalogoCompleto = () => {
           <button className="btnAl"></button>
         </Link>
         <Link to="/catalogo5">
-          <button className="btnAl"></button>
+          <button className="btnAl5"></button>
         </Link>
       </div>
     </section>
   );
 };
 
-export default CatalogoCompleto;
+export default Catalogo5;
