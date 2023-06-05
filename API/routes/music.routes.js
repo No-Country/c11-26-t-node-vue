@@ -196,7 +196,7 @@ router.get('/album/:id', async (req, res) => {
        throw 'NO EXISTEN DATOS DEL ID PROPORCIONADO';
      }
 
-     const music = await M_music.find({ 'album._id': id }); 
+     const music = await M_music.find({ 'album._id': id }).limit(5); 
     res.json({
       result: 1,
       data: { ...albumDBID.toObject() , music},

@@ -43,7 +43,18 @@ const createDefaultUser = async () => {
   'Harry Styles',
   'Beyoncé',
 ]; */
-let artist = ['Freddie Mercury', 'Alicia Keys', 'Ed Sheeran', 'Jennifer Lopez'];
+/* let artist = ['Freddie Mercury', 'Alicia Keys', 'Ed Sheeran', 'Jennifer Lopez']; */
+let artist = [
+  /* 'Freddie Mercury', */
+  /*   'Alicia Keys', */
+  /* 'Ed Sheeran', */
+  /* 'Jennifer Lopez', */
+  /*  'Frank Sinatra', */
+  /*  'Lady Gaga',  */
+  /*  'Daddy Yankee', */
+  /* 'Harry Styles', */
+  /* 'Beyoncé', */
+];
 
 const creatDefaultArtist = async () => {
   try {
@@ -114,30 +125,44 @@ const creatDefaultArtist = async () => {
           /*   console.log(insAlbum._id);
             return; */
 
-            let insMusic = new M_music();
+           
 
-            insMusic.id = data[y].id;
-            insMusic.title = data[y].title;
-            insMusic.title_short = data[y].title_short;
-            insMusic.explicit_lyrics = data[y].explicit_lyrics;
-            insMusic.preview = data[y].preview;
-            insMusic.duration = data[y].duration;
-            insMusic.artist = {
-              _id: insArtist._id,
-              name: insArtist.name,
-            };
 
-            insMusic.album._id=insAlbum._id;
-            insMusic.album.title=insAlbum.title;
 
-              
-            const musicDB = await M_music.findOne({ id: insMusic.id });
-            if (!musicDB) {
-              insMusic = await insMusic.save();
+             let url = `https://api.deezer.com/album/${insAlbum.id}/tracks`;
+             const axios = require('axios');
+             const response = await axios.get(url);
+             let { data:dataMusic } = response;
+             if (dataMusic.error) throw dataMusic.error.message;
+
+             /* console.log(dataMusic);
+             return; */
+
+            for (let z = 0; z < dataMusic.data.length; z++) {
+              let insMusic = new M_music();
+
+              insMusic.id = dataMusic.data[z].id;
+              insMusic.title = dataMusic.data[z].title;
+              insMusic.title_short = dataMusic.data[z].title_short;
+              insMusic.explicit_lyrics = dataMusic.data[z].explicit_lyrics;
+              insMusic.preview = dataMusic.data[z].preview;
+              insMusic.duration = dataMusic.data[z].duration;
+              insMusic.artist = {
+                _id: insArtist._id,
+                name: insArtist.name,
+              };
+              insMusic.album._id = insAlbum._id;
+              insMusic.album.title = insAlbum.title;
+              const musicDB = await M_music.findOne({ id: insMusic.id });
+              if (!musicDB) {
+                insMusic = await insMusic.save();
+
+                console.log('insert music ', insMusic.title);
+              }
             }
         }
 
-
+        console.log("finish seed")
         
     }
 
