@@ -1,4 +1,5 @@
 import Artists from "../Artists/Artists";
+import "../ItemList/ItemList.css";
 
 const ArtistaList = ({ productos }) => {
   // Mezclar el arreglo de productos de forma aleatoria
@@ -6,7 +7,7 @@ const ArtistaList = ({ productos }) => {
   // Obtener solo los primeros 12 productos aleatorios
   const productosLimitado = productosAleatorio.slice(0, 12);
   return (
-    <div>
+    <div className="contendorProductos">
       {productosLimitado.map((prod) => (
         <Artists key={prod._id} {...prod} />
       ))}

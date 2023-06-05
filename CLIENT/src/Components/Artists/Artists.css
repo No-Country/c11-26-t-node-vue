@@ -1,0 +1,44 @@
+/* .contenedorArtst {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: red;
+} */
+
+.cardArtist {
+  display: flex;
+  flex-direction: row;
+  border-radius: 12px;
+  background: #ffd829;
+  height: 280px;
+  width: 181px;
+  margin-bottom: 32px;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.cardArtist:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+
+.contenedorCardArtist {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist {
+    display: flex;
+    flex-direction: column;
+    color: #1D1B20;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 14px;
+    margin-top: 20PX;
+}

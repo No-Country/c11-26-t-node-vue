@@ -52,11 +52,11 @@ export const getProductosPorCategoria = (idCategoria) => {
 
 /*------------------------------------------------------------------------------------------ */
 
-export const dba = `${API}/music/artists`;
+export const dba = `${API}/music/artist`;
 
 export const getArtists = () => {
 	return axios
-		.get(`${API}/music/artists`)
+		.get(`${API}/music/artist`)
 		.then((response) => response.data)
 		.catch((error) => {
 			console.error("Error al obtener los productos", error);
@@ -66,7 +66,7 @@ export const getArtists = () => {
 
 export const getItemArtists = (_id) => {
 	return axios
-		.get(`${API}/music/artists`)
+		.get(`${API}/music/artist`)
 		.then((response) => {
 			const data = response.data.data;
 			const items = data.find((element) => element._id === _id);
@@ -84,7 +84,7 @@ export const getItemArtists = (_id) => {
 
 export const getProductosPorCategoriaArtists = (idCategori) => {
 	return axios
-		.get(`${API}/music/artists?categoria=${idCategori}`)
+		.get(`${API}/music/artist?categoria=${idCategori}`)
 		.then((response) => response.data)
 		.catch((error) => {
 			console.error(
