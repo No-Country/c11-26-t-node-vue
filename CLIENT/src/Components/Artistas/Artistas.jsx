@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import Carrusel from "../Carrusel/Carrusel";
 import "./Artistas.css";
 
@@ -95,7 +96,7 @@ const Artistas = () => {
           </div>
         </div>
       </div>
-        <button className="btnVerMas">Ver más</button>
+        <Link className="btnVerMas" to='/artists' >Ver más</Link>
     </>
       )}
       

@@ -1,9 +1,3 @@
-.cardProducto {
-   
-  text-decoration: none;
-}
-
-
 .btninfo {
   border: none;
   color: none;
@@ -11,6 +5,7 @@
 }
 
 .cardProducto {
+  text-decoration: none;
   border-radius: 12px;
   background:#FFD829;
   height: 280PX;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../Item/Item.css";
 import "../ItemList/ItemList.css"
 import "../../App.less";
-import "../../App.less";
+import "./Artists.css";
 
 const Artists = ({ _id, picture_medium, name }) => {
   const color = ["#FFD829", "#FE6927", "#FF80D9", "#4EAFFE", "#FE6927"];
@@ -16,10 +16,10 @@ const Artists = ({ _id, picture_medium, name }) => {
   }, []);
 
   return (
-    <>
+    <section className="cardProducto">
       <Link
         to={`/artista/${_id}`}
-        className="cardProducto"
+        className="cardAtr"
         style={{ backgroundColor }}
       >
         <div className="contenedorCardArtista">
@@ -29,7 +29,7 @@ const Artists = ({ _id, picture_medium, name }) => {
           </div>
         </div>
       </Link>
-    </>
+    </section>
   );
 };
 

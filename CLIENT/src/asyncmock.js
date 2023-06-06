@@ -66,10 +66,10 @@ export const getArtists = () => {
 
 export const getItemArtists = (_id) => {
 	return axios
-		.get(`${API}/music/artist`)
+		.get(`${API}/music/artist/`)
 		.then((response) => {
 			const data = response.data.data;
-			const items = data.find((element) => element._id === _id);
+			 const items = data.find((element) => element._id === _id);
 			if (items) {
 				return items;
 			} else {

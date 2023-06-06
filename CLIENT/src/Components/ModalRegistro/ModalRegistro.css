@@ -1,0 +1,106 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  position: absolute;
+  width: 1072px;
+  height: 639px;
+  left: calc(50% - 1072px / 2);
+  top: calc(50% - 639px / 2 + 0.5px);
+
+  background: linear-gradient(128.14deg, #ffffff 32.19%, #ffd829 99.29%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chicoSonr {
+  width: 467px;
+  height: 527px;
+  display: flex;
+  flex-direction: row;
+}
+
+.mobalText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnI {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 200px;
+  height: 40px;
+  /* Color 3 */
+  color: #eaebed;
+  background: #ff80d9;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.h2Modal {
+  width: 466px;
+  height: 39px;
+  left: 285px;
+  top: calc(50% - 39px / 2 - 54.5px);
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* Color 1 */
+
+  color: #303030;
+}
+
+.h4Modal {
+  width: 545px;
+  height: 48px;
+  left: 252px;
+  top: 527px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  /* or 24px */
+
+  text-align: center;
+
+  /* Color 1 */
+
+  color: #303030;
+}
+
+.vectorOnda {
+  width: 205px;
+  height: 17px;
+  margin-left: 329px;
+  border-radius: 50px;
+}

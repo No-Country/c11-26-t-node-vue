@@ -15,8 +15,9 @@ import Catalogo3 from "./Components/Catalogo3/Catalogo3";
 import Catalogo4 from "./Components/Catalogo4/Catalogo4";
 import Catalogo5 from "./Components/Catalogo5/Catalogo5";
 import ArtistaListConteiner from "./Components/ArtistaListConteiner/ArtistaListConteiner";
-
-
+import ArtistaDetailContainer from "./Components/ArtistaDetailContainer/ArtistaDetailContainer";
+import ContenedorArtista from "./Components/ContenedorArtista/ContenedorArtista";
+import ModalRegistro from "./Components/ModalRegistro/ModalRegistro";
 function App() {
   return (
     <BrowserRouter>
@@ -29,16 +30,18 @@ function App() {
         <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
         <Route path="/home" element={<Home />} />
         <Route path="/iniciarsesion" element={<InicioSesion />} />
-        <Route path="/album" element={ <CatalogoCompleto /> } />
-        <Route path="/catalogo2" element={ <Catalogo2 /> } />
-        <Route path="/catalogo3" element={ <Catalogo3 /> } />
-        <Route path="/catalogo4" element={ <Catalogo4 /> } />
-        <Route path="/catalogo5" element={ <Catalogo5 /> } />
+        <Route path="/album" element={<CatalogoCompleto />} />
+        <Route path="/catalogo2" element={<Catalogo2 />} />
+        <Route path="/catalogo3" element={<Catalogo3 />} />
+        <Route path="/catalogo4" element={<Catalogo4 />} />
+        <Route path="/catalogo5" element={<Catalogo5 />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/artists" element={ <ArtistaListConteiner />} />
-
-
+        <Route path="/artists" element={<ArtistaListConteiner />} />
+        <Route path="/:idCategori" element={<ArtistaListConteiner />} />
+        <Route path="/items/:idItems" element={<ArtistaDetailContainer />} />
+        <Route path="/artista" element={<ContenedorArtista />} />
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );

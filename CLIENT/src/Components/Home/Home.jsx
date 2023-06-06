@@ -17,12 +17,9 @@ function Home() {
 
   //const lastUserAlias = localStorage.getItem("lastUserAlias");
 
-  useEffect(() => {
+  
     const storedAlias = localStorage.getItem("alias");
-    if (storedAlias) {
-      setAlias(storedAlias);
-    }
-  }, []);
+ 
 
   const handleSearch = () => {
     console.log("Realizando búsqueda con el término:", searchTerm);
@@ -55,7 +52,7 @@ function Home() {
                 <span className="inicio">Catálogo</span>
               </Link>
               <Link className="linkHome">
-                <span className="inicio">Artistas</span>
+                <span className="inicio" to='/artists' >Artistas</span>
               </Link>
               <img className="chicoMusic1" src={kid_music} alt="Chico escuchando musica" />
             </ul>
@@ -82,7 +79,7 @@ function Home() {
         <section className="welcome">
           <div className="welcome-text">
             <h3>
-              Te damos la bienvenida, <span>{alias}.</span>
+              Te damos la bienvenida, <span>{storedAlias}.</span>
             </h3>
             <h1>
               ¡vamos a disfrutar <br /> de la{" "}

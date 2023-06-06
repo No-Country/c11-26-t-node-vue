@@ -1,0 +1,9 @@
+.contenedorItems {
+    height: 960px;
+    width: 100%;
+    background: linear-gradient(180deg, #1e003e 50%, #000000 100%);
+    display: grid;
+    grid-template-columns: 716px 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+  }

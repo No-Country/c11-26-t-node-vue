@@ -1,20 +1,4 @@
-/* .contenedorArtst {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: red;
-} */
-
-.cardArtist {
-  display: flex;
-  flex-direction: row;
-  border-radius: 12px;
-  background: #ffd829;
-  height: 280px;
-  width: 181px;
-  margin-bottom: 32px;
-  transition: all 0.25s;
+.cardAtr{
   text-decoration: none;
 }
 
@@ -42,3 +26,4 @@
     margin-left: 14px;
     margin-top: 20PX;
 }
+

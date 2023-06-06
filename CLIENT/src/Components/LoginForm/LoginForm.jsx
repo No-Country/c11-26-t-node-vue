@@ -51,7 +51,7 @@ function LoginForm() {
             setEmail("");
             setPassword("");
             setConfirmPassword("");
-
+            localStorage.setItem("alias", alias);
             setError(
               <span className="exitoUser">
                 Usuario registrado exitosamente, puede iniciar sesión
@@ -184,9 +184,10 @@ function LoginForm() {
           </div>
         </form>
       </div>
-      <ModalRegistro />
+      {openModal && <ModalRegistro />}
     </section>
   );
 }
 
 export default LoginForm;
+
