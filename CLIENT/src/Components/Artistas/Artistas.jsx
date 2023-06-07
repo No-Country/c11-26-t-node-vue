@@ -1,25 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Carrusel from "../Carrusel/Carrusel";
-import { getArtists } from "../../asyncmock";
 import "./Artistas.css";
 
 const Artistas = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [artists, setArtists] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
-    getArtists()
-      .then((data) => {
-        setArtists(data);
-      })
-      .catch((error) => {
-        console.error(`Error al obtener el producto con ID ${_id}`, error);
-      });
 
     handleResize();
 
@@ -42,95 +32,70 @@ const Artistas = () => {
         <span className="artistash2Home">artistas</span>
       </div>
       <div className="contenedorArt">
-        
-         {artists?.data?.map((artist, index) => 
-         
-           { 
-                  switch (index) {
-                          case 0:
-                            return (
-                                  <React.Fragment key={index}>
-                                    {
-                                      <div className="frankFreddie">
-                                                      <img
-                                                        className="imgArt1"
-                                                        src={artist.picture_xl}
-                                                        alt={artist.name}
-                                                      /> 
-                                                      <img
-                                                        className="imgArt5"
-                                                        src={artists.data[index+1].picture_xl}
-                                                        alt={artists.data[index+1].name}
-                                                      />
-                                                      
-                                        </div>
-                                        
-                                    }
-                                  </React.Fragment>
-                              )
-                           case 2:
-                            return (
-                                  <React.Fragment key={index}>
-                                    {
-                                      <div className="contenedorGrupoA">
-                                              <div className="grupoUno">
-                                                <img
-                                                  className="imgArt2"
-                                                  src={artists.data[index].picture_xl}
-                                                  alt={artists.data[index].name}
-                                                />
-                                                <img
-                                                  className="imgArt3"
-                                                  src={artists.data[index+1].picture_xl}
-                                                  alt={artists.data[index+1].name}
-                                                />
-                                                <img
-                                                  className="imgArt4"
-                                                  src={artists.data[index+2].picture_xl}
-                                                  alt={artists.data[index+2].name}
-                                                />
-                                              </div>
+        <div className="frankFreddie">
+          <img
+            className="imgArt1"
+            src={"../../assets/Artistas-Home/FrankSinatra.svg"}
+            alt="Frank Sinatra"
+          />
+          <img
+            className="imgArt5"
+            src={"../../assets/Artistas-Home/FreddieMercury.svg"}
+            alt="Freddie Mercury"
+          />
+        </div>
 
-                                              <div className="ladyMateo">
-                                                <img
-                                                  className="imgArt6"
-                                                   src={artists.data[index+3].picture_xl}
-                                                  alt={artists.data[index+3].name}
-                                                />
-                                                <img
-                                                  className="imgArt7"
-                                                   src={artists.data[index+4].picture_xl}
-                                                  alt={artists.data[index+4].name}
-                                                />
-                                              </div>
+        <div className="contenedorGrupoA">
+          <div className="grupoUno">
+            
+            <img
+              className="imgArt2"
+              src={"../../assets/Artistas-Home/EdSheeran.svg"}
+              alt="Ed Sheeran"
+            />
+            <img
+              className="imgArt3"
+              src={"../../assets/Artistas-Home/Beyoncé.svg"}
+              alt="Beyoncé"
+            />
+            <img
+              className="imgArt4"
+              src={"../../assets/Artistas-Home/DaddyYankee.svg"}
+              alt="Daddy Yankee"
+            />
+          </div>
 
-                                              <div className="grupoDos">
-                                                <img
-                                                  className="imgArt8"
-                                                   src={artists.data[index+5].picture_xl}
-                                                  alt={artists.data[index+5].name}
-                                                />
-                                                <img
-                                                  className="imgArt9"
-                                                   src={artists.data[index+6].picture_xl}
-                                                  alt={artists.data[index+6].name}
-                                                />
-                                                
-                                              </div>
-                                        </div>
-                                        
-                                    }
-                                  </React.Fragment>
-                              )
-                         
-                      
-                        default:
-                          (<div>ss</div>)
-                          break;
-                    }
-          }
-          )}
-      
+          <div className="ladyMateo">
+            <img
+              className="imgArt6"
+              src={"../../assets/Artistas-Home/LadyGaga.svg"}
+              alt="Lady Gaga"
+            />
+            <img
+              className="imgArt7"
+              src={"../../assets/Artistas-Home/MateoSujatovich.svg"}
+              alt="MateoSu jatovich"
+            />
+          </div>
+
+          <div className="grupoDos">
+            <img
+              className="imgArt8"
+              src={"../../assets/Artistas-Home/AliciaKeys.svg"}
+              alt="Alicia Keys"
+            />
+            <img
+              className="imgArt9"
+              src={"../../assets/Artistas-Home/HarryStyles.svg"}
+              alt="Harry Styles"
+            />
+            <img
+              className="imgArt10"
+              src={"../../assets/Artistas-Home/JenniferLopez.svg"}
+              alt="Jennifer Lopez"
+            />
+          </div>
+        </div>
       </div>
         <Link className="btnVerMas" to='/artists' >Ver más</Link>
     </>
