@@ -7,7 +7,7 @@ const Cart = () => {
 
   return (
     <div className="contenedorCart">
-      <h1 className="tituloCart">Carrito de compras</h1>
+      
       {carrito.length === 0 ? (
         <p>No hay productos en el carrito.</p>
       ) : (
@@ -18,13 +18,16 @@ const Cart = () => {
                 {/*  <p>{JSON.stringify(item.item)}</p> */}
                 {item.item && (
                   <>
-                 
-                    <h3 >{item.item.artist.name}</h3>
-                    <p>{item.item.price}</p>
+                   <div className="contenedorCart">
                     <img src={item.item.cover} alt={item.item.title} />
+                    <h1 className="tituloCart">Iniciar tu compra</h1>
+
+                    <h3 >{item.item.artist.name}</h3>
+                    <p>US ${item.item.price.toFixed(2)}</p>
                     <button onClick={() => eliminarProducto(item.item._id)}>
                       Eliminar
                     </button>
+                    </div>
                   </>
                 )}
               </div>
