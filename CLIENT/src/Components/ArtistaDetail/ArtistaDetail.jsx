@@ -60,7 +60,11 @@ const ArtistaDetail = ({_id, name, picture_xl, bibliography}) => {
         <div className="contenedorItem">
       <h2> {name} </h2>
 
-      <h4> us$ {precioto.Fixed(2)}</h4>
+
+     
+=======
+      <h4> us$ {price.Fixed(2)}</h4>
+
       <h4>{id}</h4>
       <img src={picture_xl} alt={titulo} className={name}/>
 
