@@ -7,7 +7,6 @@ const Item = ({ _id, title, cover, artist}) => {
   const agregarProd = () => {
     console.log(_id);
   };
-  console.log(_id)
   const colores = ['#FFD829', '#FE6927', '#FF80D9', '#4EAFFE', '#FE6927'];
   const [backgroundColor, setBackgroundColor] = useState('');
 

@@ -34,6 +34,7 @@ const musicScheme = new Schema({
 const albumScheme = new Schema({
   title: { type: String, trim: true },
   id: { type: Number },
+  price: { type: Number },
   cover: { type: String, trim: true },
   cover_small: { type: String, default: false },
   cover_medium: { type: String, trim: true },

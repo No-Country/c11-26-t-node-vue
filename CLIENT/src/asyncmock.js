@@ -66,12 +66,17 @@ export const getArtists = () => {
 
 export const getItemArtists = (_id) => {
 	return axios
-		.get(`${API}/music/artist/`)
+		.get(`${API}/music/artist/${_id}`)
 		.then((response) => {
-			const data = response.data.data;
-			 const items = data.find((element) => element._id === _id);
-			if (items) {
-				return items;
+			const data = response.data;
+			console.log(data);
+			if (data) {
+				switch (data.result) {
+					case 1:
+						return data.data;
+					default:
+						throw data.message;
+				}
 			} else {
 				throw new Error(`No se encontró ningún elemento con el ID ${_id}`);
 			}
