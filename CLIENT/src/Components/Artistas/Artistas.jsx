@@ -47,6 +47,7 @@ const Artistas = () => {
 
         <div className="contenedorGrupoA">
           <div className="grupoUno">
+            
             <img
               className="imgArt2"
               src={"../../assets/Artistas-Home/EdSheeran.svg"}

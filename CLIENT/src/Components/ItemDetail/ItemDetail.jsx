@@ -20,7 +20,7 @@ const ItemDetail = ({ _id }) => {
   const { agregarProductos } = useContext(CarritoContext);
 
   const handleClickAgregarCarrito = () => {
-    const item = { _id, price: itemData?.price };
+    const item = { ...itemData };
     console.log("Agregando producto al carrito:", item);
     agregarProductos(item, 1);
   };
