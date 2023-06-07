@@ -1,17 +1,18 @@
+import { Link } from 'react-router-dom';
 import './Contador.css';
 import { useState } from 'react';
 
-const Contador = ({inicial, stock, funcionAgregar}) => {
+const Contador = ({inicial, funcionAgregar}) => {
     const [contador, setcontador] = useState(inicial)
      
     const aumentarContador = () => {
-        if (contador < stock) {
+        if (contador < 10) {
             setcontador(contador + 1)
         }
     }
 
     const disminuirContador = () => {
-        if (contador > inicial) {
+        if (contador > 1) {
             setcontador(contador - 1)
         }
     }
@@ -23,7 +24,7 @@ const Contador = ({inicial, stock, funcionAgregar}) => {
      <h2 className='numerito'> {contador} </h2>
      <button className='btnMas' onClick={ aumentarContador }> + </button>
     </div>
-    <button onClick={() => funcionAgregar(contador)}>Agregar al Carrito</button>
+    <Link to='*' onClick={() => funcionAgregar(contador)} className="btnCarrito">Agregar al Carrito</Link>
     </>
   )
 }

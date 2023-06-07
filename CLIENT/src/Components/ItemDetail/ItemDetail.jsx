@@ -1,23 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './ItemDetail.css';
-import '../../App.less';
-import Corazon from '../Corazon/Corazon';
-import AudioPlayer from '../AudioPlayer/AudioPlayer';
-import playIcon from '../../../assets/Iconos-Artistas-Home/play.svg';
-import { getItem } from '../../asyncmock';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./ItemDetail.css";
+import "../../App.less";
+import Corazon from "../Corazon/Corazon";
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
+import playIcon from "../../../assets/Iconos-Artistas-Home/play.svg";
+import { getItem } from "../../asyncmock";
+import { useContext } from "react";
+import { CarritoContext } from "../Contex/CarritoContext";
 
-const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
-  const colores = ['#FFD829', '#FE6927', '#FF80D9', '#4EAFFE', '#FE6927'];
-  const [backgroundColor, setBackgroundColor] = useState('');
+const ItemDetail = ({ _id }) => {
+  const colores = ["#FFD829", "#FE6927", "#FF80D9", "#4EAFFE", "#FE6927"];
+  const [backgroundColor, setBackgroundColor] = useState("");
   const [agregarCantidad, setAgregarCantidad] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
   const [selectedAudio, setSelectedAudio] = useState(null);
   const [itemData, setItemData] = useState(null);
 
-  const manejadorCantidad = (cantidad) => {
-    setAgregarCantidad(cantidad);
-    console.log('Productos agregados ' + cantidad);
+  const { agregarProductos } = useContext(CarritoContext);
+
+  const handleClickAgregarCarrito = () => {
+    const item = { _id, price: itemData?.price };
+    console.log("Agregando producto al carrito:", item);
+    agregarProductos(item, 1);
+  };
+
+  const handleClickCanciones = () => {
+    setIsClicked(true);
+  };
+
+  const handleClickResumen = () => {
+    setIsClicked(false);
   };
 
   useEffect(() => {
@@ -34,19 +47,13 @@ const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
       });
   }, [_id]);
 
-  const handleClickCanciones = () => {
-    setIsClicked(true);
-  };
-
-  const handleClickResumen = () => {
-    setIsClicked(false);
-  };
-
-  const canciones = ['Canción 1', 'Canción 2', 'Canción 3', 'Canción 4', 'Canción 5'];
-
   return (
     <div className="contenedorItem">
-      <img src={itemData?.cover_xl} alt={itemData?.title} className="imgItemDetail" />
+      <img
+        src={itemData?.cover_xl}
+        alt={itemData?.title}
+        className="imgItemDetail"
+      />
       <div className="contenedorDetail">
         <div className="navDetail">
           <ul className="ulDetail">
@@ -62,13 +69,19 @@ const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
         <h2 className="artistaDetail">{itemData?.artist.name}</h2>
         <div className="contenedorPrecioDetail">
           <h3 className="tituloDetail">{itemData?.title}</h3>
-          <h4 className="precioDetail">US $ {precio}</h4>
+          <h4 className="precioDetail">US $ {itemData?.price.toFixed(2)}</h4>
         </div>
         <div className="btnDetail">
-          <button className={`btnCanciones ${isClicked ? 'clicked' : ''}`} onClick={handleClickCanciones}>
+          <button
+            className={`btnCanciones ${isClicked ? "clicked" : ""}`}
+            onClick={handleClickCanciones}
+          >
             Canciones
           </button>
-          <button className={`btnResumen ${isClicked ? 'clicked' : ''}`} onClick={handleClickResumen}>
+          <button
+            className={`btnResumen ${isClicked ? "clicked" : ""}`}
+            onClick={handleClickResumen}
+          >
             Resumen
           </button>
         </div>
@@ -84,32 +97,51 @@ const ItemDetail = ({ _id, title, precio, cover_xl, artist }) => {
                     alt="Play"
                     onClick={() => setSelectedAudio(cancion._id)}
                   />
-                  {cancion.title}  {cancion.duration}Min
+                  {cancion.title} {cancion.duration}Min
                   <div>
-                      <audio src={cancion.preview} controls="controls"  preload="none"></audio>
+                    <audio
+                      src={cancion.preview}
+                      controls="controls"
+                      preload="none"
+                    ></audio>
                   </div>
-              
                 </li>
-                {index !== canciones.length - 1 && <hr className="lineaSeparacion" />}
+                {index !== itemData?.music.length - 1 && (
+                  <hr className="lineaSeparacion" />
+                )}
               </React.Fragment>
             ))}
           </ul>
-           
-
         ) : (
           <p className="parrafoItem">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quia eligendi enim quam sint. Suscipit
-            ipsa laboriosam iusto doloribus recusandae.loren Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Aliquam quia eligendi enim quam sint. Suscipit ipsa laboriosam iusto doloribus recusandae.loren
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+            quia eligendi enim quam sint. Suscipit ipsa laboriosam iusto
+            doloribus recusandae.loren Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Aliquam quia eligendi enim quam sint. Suscipit
+            ipsa laboriosam iusto doloribus recusandae.loren
           </p>
         )}
+
         <div className="btnConteCompra">
-          <button className="btnCompra">Compra ahora</button>
-          <button className="btnCarrito">Agregar al carrito</button>
+          <button className="btnCompra">
+            <Link to="/checkout">Finalizar compra</Link>
+          </button>
+          <Link
+            to="/cart"
+            className="btnCarrito"
+            onClick={handleClickAgregarCarrito}
+          >
+            Agregar al carrito
+          </Link>
         </div>
       </div>
 
-      {selectedAudio !== null && <AudioPlayer audioFiles={itemData.audioFiles} selectedAudio={selectedAudio} />}
+      {selectedAudio !== null && (
+        <AudioPlayer
+          audioFiles={itemData?.audioFiles}
+          selectedAudio={selectedAudio}
+        />
+      )}
     </div>
   );
 };

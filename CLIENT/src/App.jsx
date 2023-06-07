@@ -17,10 +17,12 @@ import Catalogo5 from "./Components/Catalogo5/Catalogo5";
 import ArtistaListConteiner from "./Components/ArtistaListConteiner/ArtistaListConteiner";
 import ArtistaDetailContainer from "./Components/ArtistaDetailContainer/ArtistaDetailContainer";
 import ContenedorArtista from "./Components/ContenedorArtista/ContenedorArtista";
-import ModalRegistro from "./Components/ModalRegistro/ModalRegistro";
+import { CarritoProvider } from "./Components/Contex/CarritoContext";
+
 function App() {
   return (
     <BrowserRouter>
+    <CarritoProvider>
       <ScrollToTop />
       <Routes>
         <Route path="*" element={<NavBarRegistro />} />
@@ -43,6 +45,7 @@ function App() {
       </Routes>
 
       <Footer />
+      </CarritoProvider>
     </BrowserRouter>
   );
 }
