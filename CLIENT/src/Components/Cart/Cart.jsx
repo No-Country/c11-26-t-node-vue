@@ -11,23 +11,25 @@ const Cart = () => {
       {carrito.length === 0 ? (
         <p>No hay productos en el carrito.</p>
       ) : (
-        <ul>
+        <div>
           {carrito &&
-            carrito.map((item) => (
-              <li key={item._id}>
-                {item.data && (
+            carrito.map((item,index) => (
+              <div key={index}>
+                {/*  <p>{JSON.stringify(item.item)}</p> */}
+                {item.item && (
                   <>
-                    <h3 className="arth3">{item.data.artist.name}</h3>
-                    <p>{item.data.price}</p>
-                    <img src={item.data.cover} alt={item.data.title} />
-                    <button onClick={() => eliminarProducto(item._id)}>
+                 
+                    <h3 >{item.item.artist.name}</h3>
+                    <p>{item.item.price}</p>
+                    <img src={item.item.cover} alt={item.item.title} />
+                    <button onClick={() => eliminarProducto(item.item._id)}>
                       Eliminar
                     </button>
                   </>
                 )}
-              </li>
+              </div>
             ))}
-        </ul>
+        </div>
       )}
     </div>
   );
