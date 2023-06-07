@@ -18,13 +18,14 @@ const Artists = ({ _id, picture_medium, name }) => {
   return (
     <section className="cardProducto">
       <Link
-        to={`/artista/${_id}`}
+        to={`/items/${_id}`}
         className="cardAtr"
         style={{ backgroundColor }}
       >
         <div className="contenedorCardArtista">
           <img src={picture_medium} alt={name} className="imgCard" />
           <div>
+           
             <span className="artista">{name}</span>
           </div>
         </div>

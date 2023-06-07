@@ -149,11 +149,35 @@ router.get('/get/music/artist', async (req, res) => {
 
 
  const { M_music,M_album,M_artist } = require('../models/music');
+router.get('/artist/:id', async (req, res) => {
+  try {
+     const id = req.params.id || null;
+     const artistDB = await M_artist.findOne({ _id: id });
+       if (!artistDB) {
+         throw 'NO EXISTEN DATOS DEL ID PROPORCIONADO';
+       }
+    const albumDBID = await M_album.find({ "artist._id": artistDB._id });
+    res.json({
+      result: 1,
+      data: { ...artistDB.toObject(), albumDBID },
+    });
+  } catch (error) {
+    let message;
+    if (error instanceof Error) message = error.message;
+    else message = String(error);
+    res.json({
+      result: 0,
+      message,
+    });
+  }
+});
 router.get('/artist', async (req, res) => {
   try {
    
      const artistDB = await M_artist.find();   
-   
+    if (!artistDB) {
+      throw 'NO EXISTEN DATOS DEL ID PROPORCIONADO';
+    }
     res.json({
       result: 1,
       data: artistDB.map(a=>a),

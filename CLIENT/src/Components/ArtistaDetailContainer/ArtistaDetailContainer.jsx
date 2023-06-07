@@ -15,7 +15,7 @@ const ArtistaDetailContainer = () => {
 
   return (
     <div>
-      {producto && <ArtistaDetail _id={idItems} />}
+      {producto && <ArtistaDetail _id={idItems} {...producto} />}
     </div>
   )
 }
