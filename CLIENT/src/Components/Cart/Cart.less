@@ -8,55 +8,406 @@
 @blue-magenta: #1e003e;
 
 .contenedorCart {
-  height: 960px;
   width: 100%;
-  background: linear-gradient(180deg, #000000 50%, #1e003e 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .cuerpoCart {
-    
-    height: 860px;
-    width: 1240px;
-    background: #eaebed;
-    border-radius: 100px;
-    background: linear-gradient(180deg, #000000 5%, #1e003e 90%);
-  }
-
-  .tituloCart {
-    height: 250px;
-    margin-top: 0;
-    margin-bottom: 0;
-    border-radius: 100px 100px 0 0;
-    color: #1e003e;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    font-size: 64px;
+  height: 960px;
+  left: 0px;
+  top: 0px;
+  background: rgba(48, 48, 48, 0.9);
+  .contenedorCartDetalle {
+    position: absolute;
+    width: 1298px;
+    height: 611px;
+    left: calc(50% - 1298px / 2 + 3px);
+    top: calc(50% - 611px / 2 - 0.4px);
+    background: linear-gradient(128.14deg, #ffffff 32.19%, #4eaffe 99.29%);
+    border-radius: 24.2254px;
     display: flex;
+    flex-direction: row-reverse;
+
+    justify-content: space-between;
+
+    .imgCart {
+      position: absolute;
+      width: 664px;
+      height: 611px;
+      left: calc(50% - 672px / 2 - 314px);
+      top: calc(50% - 611px / 2 - 0.5px);
+      border-radius: 24.2254px 0px 0px 24.23px;
+      display: flex;
+    }
+
+    .detalleCart {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: center;
+      margin-top: 44px;
+
+      .tituloCart {
+        width: 292px;
+        height: 39px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        color: #303030;
+      }
+      .detalle {
+        width: 86px;
+        height: 24px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        margin-right: 200px;
+
+        color: #303030;
+      }
+      .contenedorSection {
+        display: flex;
+        flex-direction: row;
+
+        gap: 45px;
+        .cartPrincipal {
+          display: flex;
+          flex-direction: column;
+
+          .autor {
+            display: flex;
+            width: 40px;
+            height: 19px;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;
+            /* or 19px */
+
+            /* Color 1 */
+
+            color: #303030;
+          }
+
+          .disco {
+            display: flex;
+            width: 41px;
+            height: 19px;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;
+            /* or 19px */
+
+            /* Color 1 */
+
+            color: #303030;
+          }
+          .formatoMp3 {
+            display: flex;
+            width: 61px;
+            height: 19px;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;
+          }
+          .tipo {
+            display: flex;
+            width: 33px;
+            height: 19px;
+
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;
+            /* or 19px */
+
+            /* Color 1 */
+
+            color: #303030;
+          }
+          .precio {
+            display: flex;
+            width: 52px;
+            height: 24px;
+
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+
+            /* Color 1 */
+
+            color: #303030;
+          }
+        }
+
+        .cartSecundaria {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          gap: 15px;
+
+          .autorRender {
+            display: flex;
+            width: 66px;
+            height: 17px;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            color: #303030;
+            width: 177px;
+          }
+
+          .discoRender {
+            display: flex;
+            width: 160px;
+            height: 17px;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            color: #303030;
+            width: 177px;
+          }
+
+          .mp3 {
+            display: flex;
+            width: 29px;
+            height: 17px;
+
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            color: #303030;
+          }
+
+          .digital {
+            display: flex;
+            width: 77px;
+            height: 17px;
+
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            /* identical to box height, or 17px */
+
+            /* Color 1 */
+
+            color: #303030;
+          }
+
+          .us {
+            display: flex;
+            width: 101px;
+            height: 24px;
+
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            /* identical to box height, or 24px */
+
+            /* Color 1 */
+
+            color: #303030;
+          }
+        }
+      }
+
+      .btnEliminar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        position: absolute;
+        width: 375px;
+        height: 40px;
+        border-radius: 100px;
+        margin-top: 450px;
+        color: #303030;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .btnEliminar:hover {
+        cursor: pointer;
+        color: #ffffff;
+        background: #ff80d9;
+      }
+    }
+
+    .btnFinalCompra {
+      cursor: pointer;
+      text-decoration: none;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      position: absolute;
+      width: 375px;
+      height: 40px;
+      background: #ff80d9;
+      border-radius: 100px;
+      margin-top: 500px;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .btnFinalCompra:hover {
+      cursor: pointer;
+      color: #303030;
+    }
+    .liCard {
+      width: 54px;
+      height: 20px;
+
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      /* identical to box height, or 125% */
+
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      /* Color 1 */
+
+      color: #303030;
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      display: flex;
+      flex-direction: row;
+    }
+    .ulCart {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0%;
+      gap: 10px;
+
+      .liCard2 {
+        width: 556px;
+        height: 20px;
+
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #303030;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+  .conteNo {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     
-  }
 
-  .lineaCart {
-    margin-top: 0;
-    height: 20px;
-    background: #1e003e;
-    display: flex;
-    justify-content: start;
+    .conteNoProd {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 1072px;
+      height: 639px;
+      background: linear-gradient(128.14deg, #ffffff 32.19%, #ffd829 99.29%);
+      border-radius: 20px;
+      margin-top: 3%;
+    }
 
-  }
+    .conteNoP {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  .lineaCart2{
-    
-    height: 10px;
-    background: #030006;
-   
+      .noProducto {
+        width: 466px;
+        height: 39px;
+        left: 285px;
+        top: calc(50% - 39px / 2 - 54.5px);
 
-  }
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 39px;
+        /* identical to box height */
 
-  .arth3 {
-    color: #eaebed;
-    font-size: 300px;
+        text-align: center;
+
+        /* Color 1 */
+
+        color: #303030;
+      }
+      .seguirNavegando {
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 375px;
+        height: 40px;
+        background: #ff80d9;
+        border-radius: 100px;
+        margin-top: 300px;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .seguirNavegando:hover {
+        color: #303030;
+      }
+
+    }
+
+    .chico {
+      width: 467px;
+      height: 527px;
+      display: flex;
+    }
   }
 }

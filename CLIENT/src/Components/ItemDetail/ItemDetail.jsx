@@ -123,9 +123,14 @@ const ItemDetail = ({ _id }) => {
         )}
 
         <div className="btnConteCompra">
-          <button className="btnCompra">
-            <Link to="/checkout">Finalizar compra</Link>
-          </button>
+          <Link
+            onClick={handleClickAgregarCarrito}
+            className="btnCompra"
+            to="/checkout"
+          >
+            Finalizar compra
+          </Link>
+
           <Link
             to="/cart"
             className="btnCarrito"

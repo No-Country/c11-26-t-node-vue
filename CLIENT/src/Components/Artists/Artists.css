@@ -2,11 +2,11 @@
   text-decoration: none;
 }
 
-.cardArtist:hover {
-    transform: translateY(-15px);
+/* .cardArtist:hover {
+    transform: translateY(-px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
   }
-  
+   */
 
 .contenedorCardArtist {
     display: flex;
@@ -27,3 +27,13 @@
     margin-top: 20PX;
 }
 
+.contArt {
+  background: linear-gradient(180deg, #7d2bd5  20%, #000000 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}

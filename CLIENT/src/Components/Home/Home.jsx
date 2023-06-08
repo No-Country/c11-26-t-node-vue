@@ -51,7 +51,7 @@ function Home() {
               <Link className="linkHome" to='/album'>
                 <span className="inicio">Catálogo</span>
               </Link>
-              <Link className="linkHome">
+              <Link to='/artists' className="linkHome">
                 <span className="inicio" to='/artists' >Artistas</span>
               </Link>
               <img className="chicoMusic1" src={kid_music} alt="Chico escuchando musica" />

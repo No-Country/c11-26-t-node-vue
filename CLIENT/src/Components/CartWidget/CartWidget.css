@@ -1,0 +1,16 @@
+.numerito {
+    font-size: 20px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    height: 22px;
+    width: auto;
+}
+
+.numeritoLink {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

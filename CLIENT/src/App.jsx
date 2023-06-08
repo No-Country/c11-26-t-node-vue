@@ -17,6 +17,7 @@ import Catalogo5 from "./Components/Catalogo5/Catalogo5";
 import ArtistaListConteiner from "./Components/ArtistaListConteiner/ArtistaListConteiner";
 import ArtistaDetailContainer from "./Components/ArtistaDetailContainer/ArtistaDetailContainer";
 import ContenedorArtista from "./Components/ContenedorArtista/ContenedorArtista";
+import Checkout from "./Components/Checkout/Checkout";
 import { CarritoProvider } from "./Components/Contex/CarritoContext";
 
 function App() {
@@ -42,6 +43,8 @@ function App() {
         <Route path="/:idCategori" element={<ArtistaListConteiner />} />
         <Route path="/items/:idItems" element={<ArtistaDetailContainer />} />
         <Route path="/artista" element={<ContenedorArtista />} />
+        <Route path="/checkout" element={<Checkout />} />
+
       </Routes>
 
       <Footer />

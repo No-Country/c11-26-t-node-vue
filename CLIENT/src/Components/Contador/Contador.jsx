@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './Contador.css';
 import { useState } from 'react';
 
-const Contador = ({inicial, funcionAgregar}) => {
+const Contador = ({inicial}) => {
     const [contador, setcontador] = useState(inicial)
      
     const aumentarContador = () => {
@@ -24,7 +24,7 @@ const Contador = ({inicial, funcionAgregar}) => {
      <h2 className='numerito'> {contador} </h2>
      <button className='btnMas' onClick={ aumentarContador }> + </button>
     </div>
-    <Link to='*' onClick={() => funcionAgregar(contador)} className="btnCarrito">Agregar al Carrito</Link>
+    
     </>
   )
 }

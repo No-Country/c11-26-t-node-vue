@@ -16,10 +16,10 @@ const Footer = () => {
           <Link className="linkFooter" to={"/home"}>
             <p className="p">Inicio</p>
           </Link>
-          <Link className="linkFooter" to={"/"}>
+          <Link className="linkFooter" to={"/album"}>
             <p className="p">Catalogó</p>
           </Link>
-          <Link className="linkFooter" to={"/"}>
+          <Link className="linkFooter" to={"/artists"}>
             <p className="p">Artistas</p>
           </Link>
         </div>

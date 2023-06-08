@@ -243,6 +243,7 @@
 }
 
 .btnConteCompra {
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -251,6 +252,7 @@
 }
 
 .btnCompra {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,6 +273,7 @@
 }
 
 .btnCarrito {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;

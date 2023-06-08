@@ -1,10 +1,10 @@
-import ItemListConteiner from "../ItemListConteiner/ItemListConteiner";
-import ItemDetailConteiner from "../ItemDetailConteiner/ItemDetailConteines";
+import ItemListConteiner from "../../components/ItemListConteiner/ItemListConteiner";
+import ItemDetailConteiner from "../../components/ItemDetailConteiner/ItemDetailConteines";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { RxMagnifyingGlass } from "react-icons/rx";
-import { getProductos } from "../../asyncmock"; 
+import { getProductos } from "../../asyncmock";
 import "../../Components/CatalogoCompleto/CatalogoCompleto.css";
 import "../../App.less";
 import "./Catalogo5.css";
@@ -49,36 +49,7 @@ const Catalogo5 = () => {
 
   return (
     <section className="cata5">
-        <div className="conte">
-        <div className="navDetail3">
-          <ul className="ulDetail">
-            <Link to="/home" className="liDetail3">
-              INICIO/
-            </Link>
-          </ul>
-        </div>
-
-        <img
-          className="trayectoriaDeOnda1"
-          src={"../assets/imgtrayectoriadeformadeonda.svg"}
-          alt="Trayectoria de Onda"
-        />
-        <h2 className="h2Catalogo1">catálogo</h2>
-
-        <div className="searchbar">
-          <input
-            className="inputSerch"
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Buscar..."
-          />
-          <button className="btnLupa" onClick={handleSearch}>
-            <RxMagnifyingGlass />
-          </button>
-        </div>
-      </div>
+      
       <Routes>
         <Route path="/" element={<ItemListConteiner />} />
         <Route path="/:idCategoria" element={<ItemListConteiner />} />
