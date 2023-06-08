@@ -8,8 +8,8 @@ class Server {
     this.port = process.env.PORT;
 
     this.paths = {
-      auth: '/auth',
-      music: '/music',
+      auth: '/api/auth',
+      music: '/api/music',
     };
     //Connect to db
     this.database();
