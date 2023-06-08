@@ -124,7 +124,6 @@
   display: flex;
   justify-content: left;
   align-items: center;
-  
 }
 
 .liDetail2 {
@@ -145,7 +144,6 @@
   align-items: center;
   padding-left: 5px;
 }
-
 
 .btnDetail {
   display: flex;
@@ -185,7 +183,7 @@
   padding: 10px 12px;
   gap: 8px;
   cursor: pointer;
-  width: 92px;
+  width: 100px;
   height: 40px;
 
   /* Color 4 */
@@ -208,7 +206,7 @@
   padding: 10px 12px;
   gap: 8px;
   cursor: pointer;
-  width: 92px;
+  width:100px;
   height: 40px;
 
   /* Color 4 */
@@ -222,7 +220,7 @@
 }
 
 .btnResumen.clicked {
-  width: 76px;
+  width: 100px;
   height: 20px;
   background: none;
   border: none;
@@ -243,7 +241,10 @@
 }
 
 .btnConteCompra {
-  
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -260,7 +261,10 @@
   padding: 0px;
   gap: 8px;
   cursor: pointer;
-
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
   width: 315px;
   height: 40px;
   left: 921px;
@@ -321,45 +325,51 @@
 /* Estilos para pantallas móviles */
 @media screen and (max-width: 340px) {
   .contenedorItem {
-    height: 1200px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1;
+    margin-bottom: 1%;
   }
 
   .imgItemDetail {
     width: 100%;
+    height: auto;
+    margin-bottom: 0px;
   }
 
   .contenedorDetail {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     padding-left: 10%;
-    padding-right: 10px;
+    padding-right: 10%;
   }
 
   .navDetail {
-    padding-left: 10%;
-    padding-right: 10px;
-  }
-
-  .ulDetail {
-  }
-
-  .liDetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 80px;
+    
+    
   }
 
   .artistaDetail {
+    font-size: 44px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
     margin-bottom: 100px;
     padding-left: 10%;
     padding-right: 10px;
   }
 
-  .contenedorPrecioDetail {
-  }
+  
 
   .tituloDetail {
     display: flex;
@@ -368,37 +378,63 @@
     padding-left: 10%;
     padding-right: 10px;
   }
+  .contenedorPrecioDetail{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tituloDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+  }
 
   .precioDetail {
-    
-    padding-right: 15px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-
-
-  .btnDetail {
-    padding-left: 10%;
-    
-  }
-
-  .btnCanciones,
-  .btnResumen {
+  .cataPlay {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     
   }
 
-  .listaCanciones {
+  .play {
+    display: flex;
+    flex-direction: column;
+    margin-right: 290px;
+    
+  }
+  .play1 {
+    margin-left: 10%;
   }
 
+  .titulo1 {
+    margin-left: 10%;
+  }
+
+ .audio {
+  display: flex;
+  flex-direction: column;
+  margin-right: 47px;
+ }
+
+ 
+  
   .parrafoItem {
     padding-left: 10%;
     padding-right: 10px;
-
   }
 
-  .btnConteCompra {
-  }
-
-  .btnCompra,
   .btnCarrito {
+    margin-bottom: 10%;
   }
 }

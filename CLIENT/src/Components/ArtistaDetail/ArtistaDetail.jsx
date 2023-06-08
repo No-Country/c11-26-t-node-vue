@@ -1,28 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../ItemDetail/ItemDetail.css";
 import "../../App.less";
 import Corazon from "../Corazon/Corazon";
 import { getItemArtists } from "../../asyncmock";
 import "./ArtistaDetail.css";
+import "../ItemDetail/ItemDetail.css";
 
-const ArtistaDetail = ({ _id, name, picture_xl, bibliography }) => {
-  const colores = ["#FFD829", "#FE6927", "#FF80D9", "#4EAFFE", "#FE6927"];
-  const [backgroundColor, setBackgroundColor] = useState("");
-  const [agregarCantidad, setAgregarCantidad] = useState(0);
+const ArtistaDetail = ({ _id, name, picture_xl }) => {
   const [itemData, setItemData] = useState(null);
   const [albumDBID, setAlbumDBID] = useState(null);
-
-  const manejadorCantidad = (cantidad) => {
-    setAgregarCantidad(cantidad);
-    console.log("Productos agregados " + cantidad);
-  };
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
-    const indiceAleatori = Math.floor(Math.random() * colores.length);
-    const colorAleatori = colores[indiceAleatori];
-    setBackgroundColor(colorAleatori);
-
     getItemArtists(_id)
       .then((data) => {
         setItemData(data);
@@ -42,46 +31,68 @@ const ArtistaDetail = ({ _id, name, picture_xl, bibliography }) => {
   };
 
   return (
-    <div className="contenedorItems">
+    <div className="contenedorArtistas">
       <img
+        className="imgArtistaDetail"
         src={itemData?.picture_xl}
         alt={itemData?.name}
-        className="imgItemDetail"
       />
-      <div className="contenedorDetail">
-        <div className="navDetail">
-          <ul className="ulDetail">
-            <Link to="/home" className="liDetail1">
+      <div className="contenedorArtistaDetail">
+        <div className="navArtistaDetail">
+          <ul className="ulArtistaDetail">
+            <Link to="/home" className="liADetail1">
               INICIO/
             </Link>
-            <Link to="/artists" className="liDetail2">
+            <Link to="/artists" className="liADetail2">
               ARTISTAS/
             </Link>
           </ul>
-          <Corazon _id={_id} />
+          <div className="corazonArt">
+            <Corazon _id={_id} />
+          </div>
         </div>
-        <div className="contenedorItem">
-          <h2> {name} </h2>
+        <div className="contenedorADetail">
+          <h2 className="h2ArtistaDetail"> {name} </h2>
 
-          <p> {bibliography} </p>
-
-          {albumDBID && (
-            <div>
-              <h3>Álbumes:</h3>
-              <ul>
-                {albumDBID.map((album) => (
-                  <li key={album._id}>{album.title}</li>
-                ))}
-              </ul>
-            </div>
+          <div className="btnADetail">
+            <button
+              className={`btnCanciones ${isClicked ? "clicked" : ""}`}
+              onClick={handleClickCanciones}
+            >
+              Albunes
+            </button>
+            <button
+              className={`btnResumen ${isClicked ? "clicked" : ""}`}
+              onClick={handleClickResumen}
+            >
+              Acerca de
+            </button>
+          </div>
+          {isClicked ? (
+            <ul className="listaArtista">
+              {albumDBID && (
+                <div className="albunesArtistas">
+                  <ul className="ulAlbunesArtistas">
+                    {albumDBID.map((album) => (
+                      <li className="liArtista" key={album._id}>
+                        {album.title}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </ul>
+          ) : (
+            <p className="parrafoArtista">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+              quia eligendi enim quam sint. Suscipit ipsa laboriosam iusto
+              doloribus recusandae.loren Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Aliquam quia eligendi enim quam sint. Suscipit
+              ipsa laboriosam iusto doloribus recusandae.loren
+            </p>
           )}
         </div>
-        <div className="btnConteCompra">
-          <button className="btnCompra">Compra ahora</button>
-          <button  className="btnCarrito">Agregar al carrito</button>
-        </div>
       </div>
-      
     </div>
   );
 };

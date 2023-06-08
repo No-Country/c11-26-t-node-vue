@@ -1,11 +1,131 @@
-.contenedorItems {
-    height: 960px;
-    width: 100%;
-    background: linear-gradient(180deg, #1e003e 50%, #000000 100%);
-    display: grid;
-    grid-template-columns: 716px 1fr;
-    justify-items: stretch;
-    align-items: stretch;
-  }
+.contenedorArtistas {
+  height: 960px;
+  width: 100%;
+  background: linear-gradient(180deg, #1e003e 50%, #000000 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.imgArtistaDetail {
+  width: 751px;
+  margin-left: 0px;
+  margin-top: 0;
+  padding-left: 0px;
+  margin-bottom: 220px;
+  object-fit: contain;
+}
+
+.contenedorArtistaDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0px;
+  margin-right: 200px;
   
+}
+
+.navArtistaDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 59px;
+  gap: 500px;
+}
+
+.ulArtistaDetail {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.liADetail1 {
+  width: 54px;
+  height: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #eaebed;
+  text-decoration: none;
+}
+
+.liADetail2 {
+  width: 54px;
+  height: 20px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #eaebed;
+  text-decoration: none;
+}
+
+
+
+.h2ArtistaDetail {
+  position: ab;
+  width: auto;
+  height: 78px;
+  left: 782px;
+  top: 139px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 78px;
+  color: #eaebed;
+  margin-left: 38px;
+  display: flex;
+}
+
+.btnADetail {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.parrafoArtista {
+  width: 528px;
+  height: 305px;
+  padding-left: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 230px;
+}
+
+.listaArtista {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+
+.albunesArtistas {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.liArtista {
+  width: auto;
+  height: auto;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}

@@ -60,7 +60,7 @@ const ItemDetail = ({ _id }) => {
             <Link to="/home" className="liDetail1">
               INICIO/
             </Link>
-            <Link to="/catalogo" className="liDetail2">
+            <Link to="/album" className="liDetail2">
               CATALOGO/
             </Link>
           </ul>
@@ -90,16 +90,19 @@ const ItemDetail = ({ _id }) => {
           <ul className="listaCanciones">
             {itemData?.music?.map((cancion, index) => (
               <React.Fragment key={index}>
-                <li>
+                <li className="cataPlay">
+                  <div className="play1">
                   <img
                     className="play"
                     src={playIcon}
                     alt="Play"
                     onClick={() => setSelectedAudio(cancion._id)}
-                  />
-                  {cancion.title} {cancion.duration}Min
+                  /> </div>
+                  <div className="titulo1">
+                  {cancion.title} {cancion.duration}Min</div>
                   <div>
                     <audio
+                      className="audio"
                       src={cancion.preview}
                       controls="controls"
                       preload="none"

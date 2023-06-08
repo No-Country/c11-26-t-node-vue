@@ -13,7 +13,7 @@ const Cart = () => {
   }, [carrito]);
 
   return (
-    <div className="contenedorCart">
+    <section className="contenedorCart">
       {carrito.length === 0 ? (
         <section className="conteNo">
           <div className="conteNoProd">
@@ -96,7 +96,7 @@ const Cart = () => {
             ))}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

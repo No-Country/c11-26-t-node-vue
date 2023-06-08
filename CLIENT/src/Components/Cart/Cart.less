@@ -339,7 +339,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
 
     .conteNoProd {
       display: flex;
@@ -401,13 +400,31 @@
       .seguirNavegando:hover {
         color: #303030;
       }
-
     }
 
     .chico {
       width: 467px;
       height: 527px;
       display: flex;
+    }
+  }
+
+  /* Estilos para pantallas móviles */
+  @media screen and (max-width: 340px) {
+    .contenedorCart {
+      display: flex;
+      flex-direction: column;
+
+      .conteNo {
+        display: flex;
+        flex-direction: column;
+        .conteNoProd {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
   }
 }
