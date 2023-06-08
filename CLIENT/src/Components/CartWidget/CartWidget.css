@@ -1,10 +1,12 @@
 .numerito {
     font-size: 20px;
     background: white;
-    color: black;
+    color: #1e003e;
     border-radius: 5px;
-    height: 22px;
+    height: auto;
     width: auto;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
 }
 
 .numeritoLink {

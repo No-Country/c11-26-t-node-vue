@@ -1,9 +1,8 @@
-import ItemListConteiner from "../../components/ItemListConteiner/ItemListConteiner";
-import ItemDetailConteiner from "../../components/ItemDetailConteiner/ItemDetailConteines";
+import ItemDetailConteiner from "../../components/ItemDetailConteiner/ItemDetailConteiner";
+import ItemListConteiner from "../../Components/ItemListConteiner/ItemListConteiner";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { RxMagnifyingGlass } from "react-icons/rx";
 import { getProductos } from "../../asyncmock";
 import "../../Components/CatalogoCompleto/CatalogoCompleto.css";
 import "../../App.less";
@@ -49,7 +48,6 @@ const Catalogo5 = () => {
 
   return (
     <section className="cata5">
-      
       <Routes>
         <Route path="/" element={<ItemListConteiner />} />
         <Route path="/:idCategoria" element={<ItemListConteiner />} />

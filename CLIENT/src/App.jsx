@@ -31,9 +31,9 @@ function App() {
         <Route path="/categoria" element={<ItemListConteiner />} />
         <Route path="/:idCategoria" element={<ItemListConteiner />} />
         <Route path="/item/:idItem" element={<ItemDetailConteiner />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home/*" element={<Home />} />
         <Route path="/iniciarsesion" element={<InicioSesion />} />
-        <Route path="/album" element={<CatalogoCompleto />} />
+        <Route path="/album/*" element={<CatalogoCompleto />} />
         <Route path="/catalogo2" element={<Catalogo2 />} />
         <Route path="/catalogo3" element={<Catalogo3 />} />
         <Route path="/catalogo4" element={<Catalogo4 />} />

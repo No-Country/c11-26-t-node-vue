@@ -94,7 +94,7 @@ function Home() {
             src={"../../../assets/home-icons/circular-star.svg"}
             alt="Estrella"
           />
-          <h2 className="albunesIconicos">álbunes icónicos</h2>
+          <h2 className="albunesIconicos">álbumes icónicos</h2>
         </section>
 
         <section className="iconic-albums">

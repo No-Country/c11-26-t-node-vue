@@ -17,7 +17,7 @@ const Catalogo = () => {
       </>
       <div className="estilosContenedor">
         <div className="estilosMusica">
-          <NavLink to={"dance"} className="linkEstilos">
+          <NavLink to="/album" className="linkEstilos">
             <h4 className="estiloH4">
               <span className="estiloB">
                 {" "}
@@ -32,7 +32,7 @@ const Catalogo = () => {
           </NavLink>
         </div>
         <div className="gif">
-          <NavLink to={"jazz"} className="linkEstilos">
+          <NavLink to="/album" className="linkEstilos">
             <h4 className="estiloH4">
               <span className="estiloB">
                 {" "}
@@ -47,7 +47,7 @@ const Catalogo = () => {
           </NavLink>
         </div>
         <div className="estilosMusica">
-          <NavLink to={"pop"} className="linkEstilos">
+          <NavLink to="/album" className="linkEstilos">
             <h4 className="estiloH4">
               <span className="estiloB">
                 {" "}
@@ -62,7 +62,7 @@ const Catalogo = () => {
           </NavLink>
         </div>
         <div className="estilosMusica">
-          <NavLink to={"r&b"} className="linkEstilos">
+          <NavLink to="/album" className="linkEstilos">
             <h4 className="estiloH4">
               <span className="estiloB">
                 {" "}
@@ -77,7 +77,7 @@ const Catalogo = () => {
           </NavLink>
         </div>
         <div className="estilosMusica">
-          <NavLink to={"rock"} className="linkEstilos">
+          <NavLink to="/album" className="linkEstilos">
             <h4 className="estiloH4">
               <span className="estiloB">
                 {" "}
