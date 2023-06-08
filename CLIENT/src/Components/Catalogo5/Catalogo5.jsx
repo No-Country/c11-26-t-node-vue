@@ -1,5 +1,5 @@
-import ItemDetailConteiner from "../../components/ItemDetailConteiner/ItemDetailConteiner";
-import ItemListConteiner from "../../Components/ItemListConteiner/ItemListConteiner";
+import ItemDetailConteiner from "../ItemDetailConteiner/ItemDetailConteines"
+import ItemListConteiner from "../ItemListConteiner/ItemListConteiner";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
