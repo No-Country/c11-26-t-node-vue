@@ -59,7 +59,7 @@ const ArtistaDetail = ({ _id, name, picture_xl }) => {
               className={`btnCanciones ${isClicked ? "clicked" : ""}`}
               onClick={handleClickCanciones}
             >
-              Albunes
+              Álbumes
             </button>
             <button
               className={`btnResumen ${isClicked ? "clicked" : ""}`}
