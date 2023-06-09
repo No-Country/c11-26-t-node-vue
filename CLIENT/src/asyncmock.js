@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = import.meta.env.VITE_BASE_URL || "https://nocountry.clopezpro.com";
+const API = import.meta.env.VITE_BASE_URL || "https://nocountry.clopezpro.com/api";
 
 export const db = API;
 

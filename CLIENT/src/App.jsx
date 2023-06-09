@@ -19,6 +19,7 @@ import ArtistaDetailContainer from "./Components/ArtistaDetailContainer/ArtistaD
 import ContenedorArtista from "./Components/ContenedorArtista/ContenedorArtista";
 import Checkout from "./Components/Checkout/Checkout";
 import { CarritoProvider } from "./Components/Contex/CarritoContext";
+import Pagar from "./Components/Pagar/Pagar";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/items/:idItems" element={<ArtistaDetailContainer />} />
         <Route path="/artista" element={<ContenedorArtista />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/pagar" element={<Pagar />} />
 
       </Routes>
 

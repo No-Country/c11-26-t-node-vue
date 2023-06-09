@@ -88,12 +88,12 @@ const Checkout = () => {
         </section>
         <hr />
         <p className="totalCompra">Total: US $ {total.toFixed(2)}</p>
-        <button
+        <Link to='/pagar'
           className="btnPagar"
-          onClick={() => console.log("Botón de Pago")}
+          
         >
           Pagar
-        </button>
+        </Link>
       </div>
     </section>
   );

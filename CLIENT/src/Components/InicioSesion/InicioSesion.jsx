@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
 import { useNavigate } from 'react-router-dom';
 
+const API = import.meta.env.VITE_BASE_URL || "https://nocountry.clopezpro.com/api";
+
 const InicioSesion = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +14,7 @@ const InicioSesion = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-     fetch(`https://nocountry.clopezpro.com/auth/login?user=${email}&pass=${password}`).then((res) => {
+     fetch(API + `/auth/login?user=${email}&pass=${password}`).then((res) => {
       if (res.status === 200) {
         return res.json();
       } else {

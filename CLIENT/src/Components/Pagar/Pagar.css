@@ -1,0 +1,160 @@
+.contePagar {
+  width: 100%;
+  height: 960px;
+  left: 0px;
+  top: 0px;
+  background: rgba(48, 48, 48, 0.9);
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteRectangle {
+  position: absolute;
+  width: 664px;
+  height: 611px;
+  left: calc(50% - 664px / 2 - 314px);
+  top: calc(50% - 611px / 2 - 0.5px);
+  background: url(Lady-Gaga-The-Fame-Monster-cover-billboard-1240.jpg);
+  border-radius: 24.2254px 0px 0px 24.23px;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteDescarga {
+  position: absolute;
+  width: 1298px;
+  height: 611px;
+  left: calc(50% - 1298px / 2 + 3px);
+  top: calc(50% - 611px / 2 - 0.5px);
+  background: linear-gradient(180deg, #1e003e 50%, #000000 100%);
+  border-radius: 24.2254px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: center;
+  align-items: end;
+  gap: 0;
+  
+}
+
+.star {
+  margin-right: 41px;
+  width: 28px;
+  height: 28px;
+}
+
+.h2Gracias {
+  margin-right: 100px;
+  width: 446px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #eaebed;
+  
+}
+
+.felicidades {
+  width: 488px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 131%;
+  text-align: center;
+  color: #eaebed;
+  margin-right: 5.5%;
+  margin-bottom: 0;
+}
+
+.descargar {
+  width: 488px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 131%;
+  text-align: center;
+  color: #eaebed;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 5.5%;
+
+}
+.disfrutar {
+  width: 488px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 131%;
+  text-align: center;
+  color: #eaebed;
+  margin-right: 5.3%;
+  
+}
+
+.archivos {
+  width: 488px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 131%;
+  text-align: center;
+  color: #eaebed;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 5.4%;
+}
+
+.rosa {
+  width: 488px;
+  left: 822px;
+  top: 359px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 131%;
+  text-align: center;
+  color: #ff80d9;
+}
+
+.btnDescargar {
+  font-family: 'Roboto';
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 18px;
+  width: 375px;
+  height: 40px;
+  left: 868px;
+  top: 579px;
+  background: #ff80d9;
+  border-radius: 100px;
+  color: #1e003e;
+}
+
+.masTarde {
+  font-family: 'Roboto';
+  text-decoration: none;
+  text-align: center;
+  width: 375px;
+  height: 40px;
+  color: #eaebed;
+  background: linear-gradient(180deg, #1e003e 50%, #000000 100%);
+  border-radius: 24.2254px;
+}
+
+.conteBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 10%;
+}

@@ -3,7 +3,7 @@ import "./LoginFrom.css";
 import { Link } from "react-router-dom";
 import { RxEyeNone, RxEyeOpen } from "react-icons/rx";
 import ModalRegistro from "../ModalRegistro/ModalRegistro";
-const API = import.meta.env.VITE_BASE_URL || "https://nocountry.clopezpro.com/api";
+
 
 function LoginForm() {
   const [alias, setAlias] = useState("");
@@ -14,6 +14,8 @@ function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+
+  const API = import.meta.env.VITE_BASE_URL || "https://nocountry.clopezpro.com/api";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
